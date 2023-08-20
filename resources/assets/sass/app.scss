@@ -1,5 +1,26 @@
+@import 'partials/bootstrapvariables';
 @import "~bootstrap/scss/bootstrap";
+
+@import 'partials/settings';
+@import 'partials/icons';
+@import 'partials/nav';
+@import 'partials/subnav';
+@import 'partials/hamburger';
+@import 'partials/topbar';
+
+
+
 body{
-    background-color: pink;
+  font-size: $font-size;
+  line-height: 1.7;
+  font-family:  "Montserrat", sans-serif;
+  font-weight: 400;
+  color:  $dark;
+  background:$bg-bodygrey;
+}
+
+html,
+body {
+	height: 100%;
 }
 
