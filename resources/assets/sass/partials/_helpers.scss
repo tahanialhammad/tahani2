@@ -1,0 +1,81 @@
+//xCore class
+.add-pointer {
+    cursor: pointer;
+  }
+  
+  .w-10 {
+    width: 10px;
+  }
+  
+  .w-30 {
+    width: 30px;
+  }
+  
+  .border-10 {
+    border-radius: 10px;
+  }
+  
+  .border-15 {
+    border-radius: 15px;
+  }
+  
+  .fs-normal {
+    font-size: $font-size;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  
+  .fs-sm {
+    font-size: $font-size-small;
+    line-height: 1.6
+  }
+  
+  .fs-xs {
+    font-size: 12px;
+    line-height: 1.6
+  }
+  
+  .fs-xxs {
+    font-size: 11px;
+    line-height: 1.5
+  }
+  
+  .bg-hidden {
+    background-color: #86898e;
+  }
+  
+  .bg-bodygrey {
+    background-color: $bg-bodygrey
+  }
+  
+  .bg-lightblue {
+    background-color: #e2f9f6;
+  }
+  .bg-bodygrey{
+    background: $bg-bodygrey;
+  }
+  
+  .bg-bronze {
+    background-color: #b69079;
+  }
+  
+  .bg-silver {
+    background-color: #b2b7be;
+  }
+  
+  .bg-gold {
+    background-color: #E5B80B;;
+  }
+  
+  .max-width-50 {
+    max-width: 50px;
+  }
+  
+  /* ===== MEDIA QUERIES=====*/
+  @media screen and (max-width: 1200px) {
+    .icon-position-absolute {
+      position: absolute;
+      width: 30px;
+      right: 0;
+    }
+  }

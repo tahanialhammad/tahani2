@@ -12340,6 +12340,111 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: transparent;
 }
 
+.add-pointer {
+  cursor: pointer;
+}
+
+.w-10 {
+  width: 10px;
+}
+
+.w-30 {
+  width: 30px;
+}
+
+.border-10 {
+  border-radius: 10px;
+}
+
+.border-15 {
+  border-radius: 15px;
+}
+
+.fs-normal {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.fs-sm {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.fs-xs {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.fs-xxs {
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.bg-hidden {
+  background-color: #86898e;
+}
+
+.bg-bodygrey {
+  background-color: #f4f6f8;
+}
+
+.bg-lightblue {
+  background-color: #e2f9f6;
+}
+
+.bg-bodygrey {
+  background: #f4f6f8;
+}
+
+.bg-bronze {
+  background-color: #b69079;
+}
+
+.bg-silver {
+  background-color: #b2b7be;
+}
+
+.bg-gold {
+  background-color: #E5B80B;
+}
+
+.max-width-50 {
+  max-width: 50px;
+}
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (max-width: 1200px) {
+  .icon-position-absolute {
+    position: absolute;
+    width: 30px;
+    right: 0;
+  }
+}
+#login .logo, #register .logo {
+  height: 100px;
+}
+#login .col-lg-6:nth-child(2), #register .col-lg-6:nth-child(2) {
+  border-radius: 25px;
+}
+#login .col-lg-6:nth-child(2) .markting-bg-img, #register .col-lg-6:nth-child(2) .markting-bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#login .col-lg-6:nth-child(2) .marktingLogo, #register .col-lg-6:nth-child(2) .marktingLogo {
+  max-height: 200px;
+  max-width: 300px;
+}
+#login .col-lg-6:nth-child(2) .mk-inner, #register .col-lg-6:nth-child(2) .mk-inner {
+  max-width: 550px;
+}
+#login .col-lg-6:nth-child(2) .carousel-indicators button, #register .col-lg-6:nth-child(2) .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
 body {
   font-size: 14px;
   line-height: 1.7;
