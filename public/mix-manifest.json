@@ -1,4 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/images/logo-xcore-white-img.svg": "/images/logo-xcore-white-img.svg",
+    "/images/logo-xcore-white-sm.svg": "/images/logo-xcore-white-sm.svg",
+    "/images/logo-xcore-white.svg": "/images/logo-xcore-white.svg",
+    "/images/svglogo.svg": "/images/svglogo.svg",
+    "/images/tahani-logo.png": "/images/tahani-logo.png"
 }
