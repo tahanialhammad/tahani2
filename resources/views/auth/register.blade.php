@@ -58,9 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 d-none d-lg-block bg-danger overflow-hidden">
-                markting
-            </div>
+            @include('auth.marketing')
         </div>
 
     </div>

@@ -1,3 +1,10 @@
+@extends('layouts.guest')
+@section('main')
+rest password
+@stop
+
+{{-- 
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -45,4 +52,4 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-guest-layout> --}}

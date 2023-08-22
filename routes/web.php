@@ -15,9 +15,9 @@ Route::middleware('is_admin')->group(function () {
 });
 
  // Auth users
-//  Route::middleware('auth')->group(function () {
-//     Route::get('/dashboard', [UserController::class, 'users'])->name('dashboard');
-// });
+ Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [UserController::class, 'users'])->name('dashboard');
+});
 
 
 

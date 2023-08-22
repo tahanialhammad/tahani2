@@ -43,7 +43,7 @@
 
                                 <div class="text-center">
                                     @if (!$deleteAccount)
-                                        <a href="/password/reset" class="link-dark border-bottom border-dark">
+                                        <a href="{{ route('password.request') }}" class="link-dark border-bottom border-dark">
                                             {{ __('Forgot your password?') }}
                                         </a>
                                     @endif
@@ -71,9 +71,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 d-none d-lg-block bg-danger overflow-hidden">
-                markting
-            </div>
+
+            @include('auth.marketing')
+          
         </div>
 
     </div>

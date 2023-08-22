@@ -13,9 +13,24 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_admin')->default(false);
+        // Schema::table('users', function (Blueprint $table) {
+        //     $table->boolean('is_admin')->default(false);
+        // });
+
+
+        Schema::create('roles', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name'); //manger , resller , customer
+            $table->timestamps();
         });
+
+   
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+        });
+
+        dd('tes');
     }
 
     /**

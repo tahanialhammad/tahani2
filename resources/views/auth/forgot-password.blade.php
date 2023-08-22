@@ -1,4 +1,46 @@
-<x-guest-layout>
+@extends('layouts.guest')
+@section('main')
+<div id="login" class="container-fluid bg-white">
+    <div class="row vh-100 p-5">
+        <div class="col-lg-6 bg-white">
+            <img src="/images/svglogo.svg" alt="logo" class=" logo add-pointer"
+            onclick="location.href='{{ url('login') }}'">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="w-100 m-2" style="max-width: 380px;">
+                       <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
+        
+                    <form method="POST" action="{{ route('password.email') }}">
+                        @csrf
+                        <h1 class="fw-bold text-capitalize text-center pb-4"> Forgot your password?</h1>
+                        <p class="text-center mb-4">No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.</p>
+
+                        <div class="mb-4">
+                            <input type="email"
+                                   class="form-control rounded-3 shadow-none @error('email') is-invalid @enderror"
+                                   name="email"
+                                   placeholder="Eemail" required autofocus>
+                            <div class="invalid-feedback">{{ $errors->first('email') }}</div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit"
+                                    class="btn btn-outline-dark rounded-pill px-5 border-2 fw-bold mx-auto shadow-none">
+                                    {{ __('Email Password Reset Link') }}
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        @include('auth.marketing')
+    </div>
+</div>
+@stop
+
+{{-- <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -33,4 +75,4 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-guest-layout> --}}
