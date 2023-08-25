@@ -8,8 +8,8 @@
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="w-100 m-2" style="max-width: 380px;">
                        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-        
+        {{-- <x-auth-session-status class="mb-4" :status="session('status')" /> --}}
+
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
                         <h1 class="fw-bold text-capitalize text-center pb-4"> Forgot your password?</h1>

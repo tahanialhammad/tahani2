@@ -1,38 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+@extends('admin.admin-template')
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+@section('content')
+{{-- @include('snippets.flash') --}}
+<div id="dashboard">
+    <div class="col-xl-9 page-title-v2 pt-4 ps-4">
+        <h3 class="fw-bold m-0">
+            Hallo {{ \Auth::user()->name }}
+        </h3>
+    </div>
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-    </head>
 
-<body>
-    <main>
-        <aside class="bg-dark vh-100 text-light" id="nav-bar">
-            @include('admin.partials.nav')
-        </aside>
+    <div class="row g-0">
+        <div class="col-xl-9 p-4">
+            @include('admin.dashboard.portlets.overview')
+            @include('admin.dashboard.portlets.invoices')
+        </div>
 
-        <section class="page-content" id="body-pd">
-            <div id="app">
-                @include('admin.partials.topbar')
-                <div class="p-4">
-                    <h1>content</h1>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
 
-</html>
+        <div class="col-xl-3 px-lg-4 p-4">
+            {{-- @include('v2.user.dashboards.portlets.news')
+
+
+            @include('v2.user.dashboards.portlets.faq') --}}
+        </div>
+    </div>
+</div>
+@stop
