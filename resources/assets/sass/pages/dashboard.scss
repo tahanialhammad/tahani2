@@ -1,0 +1,84 @@
+#dashboard {
+    .row {
+      height: 100%;
+    }
+  
+    .col-xl-9 {
+      background-image: linear-gradient(to left, #ffffff, #fcfdfe, #f8fcfc, #f5faf9, #f4f6f8);
+    }
+  
+    .overviews .card {
+      height: 170px;
+      width: 280px;
+  
+      .card-footer .icon-xl {
+        min-width: 30px;
+        max-width: 30px;
+      }
+    }
+  
+    .scrollbar-top, .scrollbar-top .card {
+      transform: rotateX(180deg);
+    }
+  
+    .scrollbar-top::-webkit-scrollbar-track {
+      margin-left: 1.5rem !important;
+    }
+  
+    .grab {
+      cursor: grab;
+    }
+  
+    .actions .card {
+      min-height: 240px;
+      min-width: 280px;
+      width: 380px;
+  
+      .card-footer .icon-xl {
+        max-height: 40px;
+        max-width: 100px;
+      }
+    }
+  
+    .flex-1 {
+      flex: 1 0 0;
+    }
+  
+    #icon-add-large {
+      border-radius: 50%;
+    }
+  
+    .overflow-auto-clip {
+      overflow-x: auto;
+      overflow-y: clip;
+    }
+  
+    .hover-scale-03:hover {
+      scale: 1.03;
+    }
+  
+    .transition-03 {
+      transition: 0.3s;
+    }
+  
+    .hover-fill-white,
+    .hover-card-button {
+      transition: 0.5s all;
+    }
+  
+    .hover-card:hover {
+      .hover-fill-white {
+        fill: var(--bs-white);
+      }
+  
+      #icon-add-large {
+        background-color: var(--bs-dark);
+      }
+  
+      .hover-card-button {
+        background-color: var(--bs-dark);
+        color: var(--bs-white);
+      }
+    }
+  }
+  

@@ -12421,8 +12421,106 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
     right: 0;
   }
 }
+.card {
+  border-radius: 10px;
+  border: 0;
+}
+.card .card-header {
+  border-color: #eaebed;
+  padding: 0;
+  background-color: transparent;
+}
+.card .card-body {
+  padding: 0;
+}
+.card .card-footer {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.card .card-text p:last-child, .card .card-text ul:last-child {
+  margin-bottom: 0;
+}
+
+.app-store .card {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.app-store .card:hover {
+  border: 2px solid #eaebed;
+}
+.app-store .card img {
+  height: 78px;
+  width: 78px;
+  border-radius: 15px;
+}
+
+#dashboard .row {
+  height: 100%;
+}
+#dashboard .col-xl-9 {
+  background-image: linear-gradient(to left, #ffffff, #fcfdfe, #f8fcfc, #f5faf9, #f4f6f8);
+}
+#dashboard .overviews .card {
+  height: 170px;
+  width: 280px;
+}
+#dashboard .overviews .card .card-footer .icon-xl {
+  min-width: 30px;
+  max-width: 30px;
+}
+#dashboard .scrollbar-top, #dashboard .scrollbar-top .card {
+  transform: rotateX(180deg);
+}
+#dashboard .scrollbar-top::-webkit-scrollbar-track {
+  margin-left: 1.5rem !important;
+}
+#dashboard .grab {
+  cursor: grab;
+}
+#dashboard .actions .card {
+  min-height: 240px;
+  min-width: 280px;
+  width: 380px;
+}
+#dashboard .actions .card .card-footer .icon-xl {
+  max-height: 40px;
+  max-width: 100px;
+}
+#dashboard .flex-1 {
+  flex: 1 0 0;
+}
+#dashboard #icon-add-large {
+  border-radius: 50%;
+}
+#dashboard .overflow-auto-clip {
+  overflow-x: auto;
+  overflow-y: clip;
+}
+#dashboard .hover-scale-03:hover {
+  scale: 1.03;
+}
+#dashboard .transition-03 {
+  transition: 0.3s;
+}
+#dashboard .hover-fill-white,
+#dashboard .hover-card-button {
+  transition: 0.5s all;
+}
+#dashboard .hover-card:hover .hover-fill-white {
+  fill: var(--bs-white);
+}
+#dashboard .hover-card:hover #icon-add-large {
+  background-color: var(--bs-dark);
+}
+#dashboard .hover-card:hover .hover-card-button {
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+}
+
 #login .logo, #register .logo {
-  height: 100px;
+  height: 20px;
 }
 #login .col-lg-6:nth-child(2), #register .col-lg-6:nth-child(2) {
   border-radius: 25px;
@@ -12443,6 +12541,9 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   width: 10px;
   height: 10px;
   border-radius: 100%;
+}
+#login .col-lg-6:nth-child(2) .carousel, #register .col-lg-6:nth-child(2) .carousel {
+  carousel-control-transition: opacity 0.1s ease;
 }
 
 body {
