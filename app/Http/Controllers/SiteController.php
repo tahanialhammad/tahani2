@@ -8,11 +8,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Packages;
 
 class SiteController extends Controller
 {
     public function index()
     {
-        return view('site.welcome');
+        $packages = Packages::all();
+
+        return view('site.home.welcome', compact('packages'));
     }
 }

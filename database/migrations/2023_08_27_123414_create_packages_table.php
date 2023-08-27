@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        if (!Schema::hasColumn('users', 'is_admin')) {
-            Schema::table('users', function (Blueprint $table) {
-                $table->boolean('is_admin')->default(false);
-            });
-        }
+        Schema::create('packages', function (Blueprint $table) {
+            $table->id();
+            $table->string('code')->unique();
+            $table->text('info');            
+            $table->timestamps();
+        });
     }
 
     /**
@@ -27,8 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('packages');
     }
 };
