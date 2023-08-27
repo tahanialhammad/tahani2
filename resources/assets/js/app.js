@@ -1,9 +1,24 @@
+// require('./bootstrap');
+
+// import Alpine from 'alpinejs';
+
+// window.Alpine = Alpine;
+
+// Alpine.start();
+
+// // alert('hi');
+
+
+
 require('./bootstrap');
 
-import Alpine from 'alpinejs';
+import { createApp } from 'vue'
+import ExampleComponent from './components/ExampleComponent.vue'
 
-window.Alpine = Alpine;
 
-Alpine.start();
 
-// alert('hi');
+createApp({
+    components: {
+        ExampleComponent,
+    }
+}).mount('#app')
