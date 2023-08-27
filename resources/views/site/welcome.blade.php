@@ -6,6 +6,7 @@
 @extends('layouts.site')
 @section('main')
 <div>welkom</div>
+<example-component></example-component>
 @stop
 
 
