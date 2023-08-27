@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('dashboard') }}">
             <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" style="height: 50px">
@@ -27,10 +27,10 @@
                             <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
                         @else
                             <a href="{{ route('login') }}"
-                                class="btn btn-sm btn-outline-dark rounded-pill px-3 border-2 fw-bold shadow-none">Login</a>
+                                class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 border-2 fw-bold shadow-none">Login</a>
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}"
-                                    class="btn btn-link text-dark text-decoration-none ">Register</a>
+                                    class="btn btn-link text-light text-decoration-none ">Register</a>
                             @endif
 
                         @endauth

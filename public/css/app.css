@@ -12546,6 +12546,106 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   carousel-control-transition: opacity 0.1s ease;
 }
 
+#dashboard .row {
+  height: 100%;
+}
+#dashboard .col-xl-9 {
+  background-image: linear-gradient(to left, #ffffff, #fcfdfe, #f8fcfc, #f5faf9, #f4f6f8);
+}
+#dashboard .overviews .card {
+  height: 170px;
+  width: 280px;
+}
+#dashboard .overviews .card .card-footer .icon-xl {
+  min-width: 30px;
+  max-width: 30px;
+}
+#dashboard .scrollbar-top, #dashboard .scrollbar-top .card {
+  transform: rotateX(180deg);
+}
+#dashboard .scrollbar-top::-webkit-scrollbar-track {
+  margin-left: 1.5rem !important;
+}
+#dashboard .grab {
+  cursor: grab;
+}
+#dashboard .actions .card {
+  min-height: 240px;
+  min-width: 280px;
+  width: 380px;
+}
+#dashboard .actions .card .card-footer .icon-xl {
+  max-height: 40px;
+  max-width: 100px;
+}
+#dashboard .flex-1 {
+  flex: 1 0 0;
+}
+#dashboard #icon-add-large {
+  border-radius: 50%;
+}
+#dashboard .overflow-auto-clip {
+  overflow-x: auto;
+  overflow-y: clip;
+}
+#dashboard .hover-scale-03:hover {
+  scale: 1.03;
+}
+#dashboard .transition-03 {
+  transition: 0.3s;
+}
+#dashboard .hover-fill-white,
+#dashboard .hover-card-button {
+  transition: 0.5s all;
+}
+#dashboard .hover-card:hover .hover-fill-white {
+  fill: var(--bs-white);
+}
+#dashboard .hover-card:hover #icon-add-large {
+  background-color: var(--bs-dark);
+}
+#dashboard .hover-card:hover .hover-card-button {
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+}
+
+#top-circle {
+  width: 80px;
+  fill: #f2505b;
+  top: -25px;
+  left: 9%;
+  z-index: 0;
+}
+
+#top-circle-stripes {
+  width: 215px;
+  fill: #0dceb1;
+  top: 34%;
+  left: -120px;
+}
+
+#top-triangle-large {
+  width: 103px;
+  fill: #0dceb1;
+  top: 14%;
+  right: -10%;
+}
+
+#top-triangle-small {
+  width: 50px;
+  fill: #f2505b;
+  top: 34%;
+  right: -9%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
 body {
   font-size: 14px;
   line-height: 1.7;
