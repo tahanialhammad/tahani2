@@ -1,0 +1,36 @@
+#top-circle {
+    width: 80px;
+    fill: #f2505b;
+    top: -25px;
+    left: 9%;
+    z-index: 0;
+}
+
+#top-circle-stripes {
+    width: 215px;
+    fill: #0dceb1;
+    top: 34%;
+    left: -120px;
+}
+
+#top-triangle-large {
+    width: 103px;
+    fill: #0dceb1;
+    top: 14%;
+    right: -10%;
+}
+
+#top-triangle-small {
+    width: 50px;
+    fill: #f2505b;
+    top: 34%;
+    right: -9%;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.z-index-1 {
+    z-index: 1;
+}

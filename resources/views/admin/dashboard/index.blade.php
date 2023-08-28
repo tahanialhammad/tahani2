@@ -14,8 +14,8 @@
 
     <div class="row g-0">
         <div class="col-xl-9 p-4">
-            @include('admin.dashboard.portlets.overview')
-            @include('admin.dashboard.portlets.invoices')
+            @include('admin.dashboard.partials.overview')
+            @include('admin.dashboard.partials.invoices')
         </div>
 
 
