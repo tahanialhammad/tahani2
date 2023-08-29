@@ -1,31 +1,30 @@
 @forelse($sections as $section)
+    <div class="card mb-2 p-4">
+        <div class="card-body">
+            <h5 class="card-title">{{ $section->name }}</h5>
+            <div>
 
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-
-
-        <div class="accordion" id="accordion-{{ $section->id }}">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    {{ $section->name }}
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-{{ $section->id }}">
-                <div class="accordion-body">
-                    <ul class="list-group">
-                        @foreach($section->faq as $faq)
-                        <li class="list-group-item">{{ $faq->question }} > {{ $faq->answer }}</li>
-                        @endforeach
-                      </ul>
+                <div class="accordion accordion-flush" id="accordionFlush-{{ $section->id }}">
+                  @foreach ($section->faq as $faq)
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-heading-{{ $faq->id }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse-{{ $faq->id }}" aria-expanded="false"
+                                aria-controls="flush-collapse-{{ $faq->id }}">
+                                {{ $faq->question }}
+                            </button>
+                        </h2>
+                        <div id="flush-collapse-{{ $faq->id }}" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading-{{ $faq->id }}" data-bs-parent="#accordionFlush-{{ $section->id }}">
+                            <div class="accordion-body">{{ $faq->answer }}</div>
+                        </div>
+                    </div>
+                    @endforeach
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
     </div>
-  </div>
 @empty
 
-no faq
-
+    no faq
 @endforelse

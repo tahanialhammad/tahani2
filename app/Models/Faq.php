@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Faq extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
     public function section()
     {

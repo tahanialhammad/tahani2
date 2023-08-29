@@ -4525,7 +4525,7 @@ textarea.form-control-lg {
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333840'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --bs-accordion-btn-icon-width: 0;
+  --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2314161a'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
@@ -12644,6 +12644,54 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
 
 .z-index-1 {
   z-index: 1;
+}
+
+.helpcenter .pointer {
+  cursor: pointer;
+}
+.helpcenter a:hover {
+  color: #b2b7be;
+}
+.helpcenter .card {
+  transition: 0.3s;
+}
+.helpcenter .card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.helpcenter .card:hover svg {
+  fill: #333840;
+}
+.helpcenter .subnav .nav-link {
+  padding: 0.65rem;
+}
+.helpcenter .subnav a {
+  color: #b2b7be;
+}
+.helpcenter .subnav a:hover, .helpcenter .subnav a.active {
+  color: #333840;
+}
+.helpcenter .btn:hover .icon-dark {
+  fill: white;
+}
+.helpcenter .accordion-button {
+  color: #333840;
+  padding: 0.65rem 0;
+}
+.helpcenter .accordion-button::after {
+  background-image: url("/images/plus_icon.svg");
+}
+.helpcenter .accordion-button:not(.collapsed)::after {
+  background-image: url("/images/minus_icon.svg");
+}
+@media screen and (min-width: 1400px) {
+  .helpcenter .card {
+    padding: 60px;
+  }
+  .helpcenter h1, .helpcenter .h1 {
+    font-size: 50px;
+  }
 }
 
 body {
