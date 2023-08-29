@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('packages', function (Blueprint $table) {
-            $table->id();
-            $table->string('code')->unique();
-            $table->text('info');            
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('packages')) {
+            Schema::create('packages', function (Blueprint $table) {
+                $table->id();
+                $table->string('code')->unique();
+                $table->text('info');
+                $table->timestamps();
+            });
+        }
     }
-
     /**
      * Reverse the migrations.
      *

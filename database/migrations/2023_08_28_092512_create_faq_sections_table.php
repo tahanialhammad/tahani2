@@ -13,10 +13,28 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('faq_sections', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('faq_sections')) {
+            Schema::create('faq_sections', function (Blueprint $table) {
+                $table->id();
+                $table->string('name')->unique();
+                $table->integer('sort_order');
+                $table->timestamps();
+            });
+        }
+
+        if (!Schema::hasTable('faqs')) {
+            Schema::create('faqs', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('section_id'); 
+                $table->foreign('section_id')->references('id')->on('faq_sections')->onDelete('cascade');
+                $table->string('question');
+                $table->text('answer');
+                $table->integer('sort_order');       
+                $table->timestamps();
+            });
+        }
+        
+        dd('test');
     }
 
     /**
