@@ -9,4 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Faq extends Model
 {
     use HasFactory;
+
+    public function section()
+    {
+        $this->hasOne(FaqSection::class, 'id', 'section_id');
+    }
 }

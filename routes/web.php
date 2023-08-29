@@ -13,9 +13,7 @@ Route::controller(SiteController::class)->group(function () {
 });
 
 // Auth only admin
-Route::middleware('is_admin')->group(function () {
-    // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    
+Route::middleware('is_admin')->group(function () {   
     // FAQ
     Route::get('/faq', [FaqController::class, 'index']);
 });

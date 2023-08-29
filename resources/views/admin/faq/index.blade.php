@@ -1,15 +1,16 @@
 
 @extends('admin.admin-template')
 @section('content')
-faq
-@forelse($sections as $section)
+<div class="d-flex">
+<div class="col-6">
+    @include('admin.faq.partials.overview')
+</div>
+<div class="col-6">
+    new faq
+</div>
+</div>
 
-{{$section}}
-@empty
 
-no faq
-
-@endforelse
 
 
 @stop
