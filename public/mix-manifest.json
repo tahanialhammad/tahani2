@@ -8,5 +8,8 @@
     "/images/packages/webpack.svg": "/images/packages/webpack.svg",
     "/images/svglogo.svg": "/images/svglogo.svg",
     "/images/tahani-interface.svg": "/images/tahani-interface.svg",
-    "/images/tahani-logo.png": "/images/tahani-logo.png"
+    "/images/tahani-logo.png": "/images/tahani-logo.png",
+    "/images/minus_icon.svg": "/images/minus_icon.svg",
+    "/images/plus_icon.svg": "/images/plus_icon.svg",
+    "/images/search_icon.svg": "/images/search_icon.svg"
 }

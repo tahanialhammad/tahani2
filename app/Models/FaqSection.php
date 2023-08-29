@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class FaqSection extends Model
 {
     use HasFactory;
-
+    protected $guarded = [];
+    
     public function faq()
     {
         return $this->hasMany(Faq::class, 'section_id');

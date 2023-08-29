@@ -17,7 +17,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center text-white" href="{{ route('admin.helpcenter') }}">
+                <a class="nav-link d-flex align-items-center text-white" href="{{ route('admin.faq.index') }}">
                   <icon-info class="icon icon-inverted"></icon-info>
                     <span class="ps-3">Helpcenter</span>
                 </a>

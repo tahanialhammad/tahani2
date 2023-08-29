@@ -1,0 +1,71 @@
+.helpcenter {
+    .pointer {
+      cursor: pointer;
+    }
+  
+    a:hover {
+      color: $color-lightgrey;
+    }
+  
+    .card {
+      transition: 0.3s;
+  
+      &:hover {
+        box-shadow: 0 0 10px rgb(0 0 0 / 8%);
+        transform: scale(1.03);
+        cursor: pointer;
+  
+        svg {
+          fill: #333840;
+        }
+      }
+    }
+  
+    .subnav {
+      .nav-link {
+        padding: 0.65rem;
+      }
+  
+      a {
+        color: $secondary;
+  
+        &:hover, &.active {
+          color: $dark
+        }
+      }
+    }
+  
+    .btn:hover {
+      .icon-dark {
+        fill: white;
+      }
+    }
+  
+    .accordion-button {
+      color: $dark;
+      padding: 0.65rem 0;
+    }
+  
+    // change accordion-icon in help center
+    $plus: "/images/plus_icon.svg";
+    $min: "/images/minus_icon.svg";
+  
+    .accordion-button::after {
+      background-image: url($plus);
+    }
+  
+    .accordion-button:not(.collapsed)::after {
+      background-image: url($min);
+    }
+  
+    @media screen and (min-width: 1400px) {
+      .card {
+        padding: 60px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+    }
+  }
+  
+  
