@@ -15,7 +15,7 @@ Route::controller(SiteController::class)->group(function () {
 // Auth only admin
 Route::middleware('is_admin')->group(function () {   
     // FAQ
-    Route::get('/faq', [FaqController::class, 'index']);
+    Route::get('/faq', [FaqController::class, 'index'])->name('admin.helpcenter');
 });
 
 // Auth users and admin
