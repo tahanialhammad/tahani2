@@ -1,6 +1,6 @@
 <header class="">
     <div class="text-center bg-dark text-white py-4 min-vh-100">
-        <h1 class="fw-bold p-4">Tahani webdeveloper with Laravel</h1>
+        <h1 class="fw-bold p-4 hero-title">Tahani webdeveloper with Laravel</h1>
         <h5 class="w-50 mx-auto text-muted fs-4">This Laravel project contains my skills in handling some Laravel
             Frontend and Backend packages</h5>
     </div>

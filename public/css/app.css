@@ -12646,6 +12646,14 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   z-index: 1;
 }
 
+.hero-title {
+  font-size: 62px;
+  background: linear-gradient(to right, #f2505b, #eaebed);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .helpcenter .pointer {
   cursor: pointer;
 }
