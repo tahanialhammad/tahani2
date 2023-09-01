@@ -11,7 +11,6 @@
                 'icon' => '<icon-info class="icon icon-inverted"></icon-info>'
             ],
         ]);    
-// $arraylink  = ['hh', 'kk'];
 
 // $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
 
@@ -23,11 +22,8 @@
 
 {{-- @foreach($obj as $key => $value) 
      {{ $key }} -{{ $value}}
-    @endforeach
-
-@foreach ($arraylink as $item)
-    {{ $item}}
 @endforeach --}}
+
 
 <nav class="h-100 overflow-hiddenttt overflow-auto">
     <div>

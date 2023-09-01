@@ -6,5 +6,6 @@
 
 @section('content')
     {{-- <example-component></example-component> --}}
+    @include('site.home.partials.about')
     @include('site.home.partials.packages')
 @stop
