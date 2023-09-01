@@ -17,6 +17,7 @@ Route::middleware('is_admin')->group(function () {
     // FAQ
     Route::get('/faq', [FaqController::class, 'index'])->name('admin.faq.index');
     Route::post('faq/section/edit', [FaqController::class, 'addOrEditSection'])->name('admin.faq.addOrEditSection');
+    Route::post('faq/edit', [FaqController::class, 'addOrEditFaq'])->name('admin.faq.addOrEditFaq');
 });
 
 // Auth users and admin
