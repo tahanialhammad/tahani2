@@ -25,4 +25,17 @@ class FaqController extends Controller
         ]);
         return back();
     }
+
+    public function addOrEditFaq(Request $request)
+    {
+        //  dd($request->all());
+
+        Faq::create([
+            'section_id' => $request->input('section'),
+            'question' => $request->input('question'),
+            'answer'  => $request->input('answer'),
+            'sort_order' =>  $request->input('sortOrder') ?? 1,
+        ]);
+        return back();
+    }
 }

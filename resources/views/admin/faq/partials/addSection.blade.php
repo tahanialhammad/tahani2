@@ -1,4 +1,4 @@
-<div class="card p-4">
+<div class="card p-4 mb-4">
     <div class="card-body">
         <h5 class="card-title">Add FAQ section</h5>
         <div>
