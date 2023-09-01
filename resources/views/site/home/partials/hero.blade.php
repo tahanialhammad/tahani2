@@ -7,7 +7,9 @@
 
     <div class="w-75 position-relative mx-auto" style="margin-top: -300px">
         <img src="/images/tahani-interface.svg"
-              class="mb-4 z-index-1" alt="">
+              class="mb-4 z-index-1" alt=""  data-aos="fade-up"    data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out">
 
         <svg id="top-circle"
             class="absolute" viewBox="0 0 207 207">
