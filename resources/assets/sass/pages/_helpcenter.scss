@@ -14,10 +14,12 @@
         box-shadow: 0 0 10px rgb(0 0 0 / 8%);
         transform: scale(1.03);
         cursor: pointer;
+        background-color: $dark;
+        color: white;
   
-        svg {
-          fill: #333840;
-        }
+        // svg {
+        //   fill: $light;
+        // }
       }
     }
   

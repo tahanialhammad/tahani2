@@ -12667,9 +12667,8 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
   transform: scale(1.03);
   cursor: pointer;
-}
-.helpcenter .card:hover svg {
-  fill: #333840;
+  background-color: #333840;
+  color: white;
 }
 .helpcenter .subnav .nav-link {
   padding: 0.65rem;
