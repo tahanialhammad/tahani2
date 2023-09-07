@@ -1,4 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+@php
+    $navLinks = collect([
+        [
+            'name' => 'Home',
+            'route' => 'welcome',
+        ],
+        [
+            'name' => 'Helpcenter',
+            'route' => 'site.helpcenter.index',
+        ],
+    ]);
+    $navClass = request()->routeIs('welcome') ? 'navbar-dark bg-dark' : 'navbar-light bg-white' ;
+    $navBtnClass = request()->routeIs('welcome') ? 'light' : 'dark' ;
+@endphp
+
+<nav class="navbar navbar-expand-lg sticky-top {{ $navClass }}">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('dashboard') }}">
             <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" style="height: 50px">
@@ -12,25 +27,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('dashboard') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+                @foreach ($navLinks as $navLink)
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs($navLink['route']) ? 'active' : ''}}"
+                            aria-current="page"href="{{ route($navLink['route']) }}">{{ $navLink['name'] }}</a>
+                    </li>
+                @endforeach
             </ul>
 
             <div class="d-flex">
                 @if (Route::has('login'))
                     <div class="">
                         @auth
-                            <a href="{{ url('/dashboard') }}" class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 border-2 fw-bold shadow-none me-2">Dashboard</a>
+                            <a href="{{ url('/dashboard') }}"
+                                class="btn btn-sm btn-outline-{{ $navBtnClass }} rounded-pill px-4 py-2 border-2 fw-bold shadow-none me-2">Dashboard</a>
                         @else
                             <a href="{{ route('login') }}"
-                                class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 border-2 fw-bold shadow-none">Login</a>
+                                class="btn btn-sm btn-outline-{{ $navBtnClass }} rounded-pill px-4 py-2 border-2 fw-bold shadow-none">Login</a>
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}"
-                                    class="btn btn-link text-light text-decoration-none ">Register</a>
+                                    class="btn btn-link text-{{ $navBtnClass }} text-decoration-none ">Register</a>
                             @endif
 
                         @endauth
