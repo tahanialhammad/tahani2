@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Packages;
+use App\Models\Faq;
+use App\Models\FaqSection;
 
 class SiteController extends Controller
 {
@@ -18,4 +20,12 @@ class SiteController extends Controller
 
         return view('site.home.welcome', compact('packages'));
     }
+
+    public function helpcenter()
+    {
+        $sections =  FaqSection::all();
+        $allFaqs = Faq::all();
+        return view('site.helpcenter.index', compact('sections', 'allFaqs'));
+    }
+
 }

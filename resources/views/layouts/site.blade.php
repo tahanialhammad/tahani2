@@ -20,7 +20,7 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div id="app">
+        <div id="app" class="bg-white">
             @include('layouts.siteNavigation')
 
             <!-- Page Heading -->

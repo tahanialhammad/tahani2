@@ -10,6 +10,7 @@ use App\Http\Controllers\DashboardController;
 // Site
 Route::controller(SiteController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
+    Route::get('/helpcenter', 'helpcenter')->name('site.helpcenter.index');
 });
 
 // Auth only admin
