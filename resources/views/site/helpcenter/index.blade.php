@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-    <div class="helpcenter mx-auto mx-xl-5 px-xl-5">
+    <div class="helpcenter col-8 mx-auto">
         <div class="py-4">
             <h3 class="fw-bold text-center mb-4">Categories</h3>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-lg-5 bg">
