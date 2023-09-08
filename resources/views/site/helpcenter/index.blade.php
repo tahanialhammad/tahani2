@@ -26,7 +26,7 @@
                         </a>
                     </div>
                 @empty
-                    no fag items
+                    No faq items
                 @endforelse
             </div>
         </div>

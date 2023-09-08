@@ -43,5 +43,17 @@
         border-radius: 15px;
       }
     }
+    .packages{
+      .card{
+          &:hover{
+          border: 2px solid $dark !important;
+          .btn-outline-dark{
+            background-color: $dark;
+            color: white;
+          }
+        }
+      }
+     
+    }
   }
   
