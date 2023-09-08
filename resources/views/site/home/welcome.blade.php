@@ -8,4 +8,5 @@
     {{-- <example-component></example-component> --}}
     @include('site.home.partials.about')
     @include('site.home.partials.packages')
+    @include('site.home.partials.customers')
 @stop
