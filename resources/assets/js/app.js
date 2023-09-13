@@ -15,6 +15,7 @@ require('./bootstrap');
 import { createApp } from 'vue'
 import ExampleComponent from './components/ExampleComponent.vue'
 import RealTimeSearch from './components/RealTimeSearch.vue'
+import GlideSlider from './components/GlideSlider.vue'
 
 //Icons
 import IconBack from './components/icons/IconBack.vue'
@@ -26,6 +27,7 @@ createApp({
     components: {
         ExampleComponent,
         RealTimeSearch,
+        GlideSlider,
         IconBack,
         IconHome,
         IconInfo,
