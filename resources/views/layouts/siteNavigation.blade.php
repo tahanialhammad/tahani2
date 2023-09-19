@@ -13,6 +13,7 @@
     $navBtnClass = request()->routeIs('welcome') ? 'light' : 'dark' ;
 @endphp
 
+{{-- https://laracasts.com/series/php-for-beginners-2023-edition/episodes/7 --}}
 <nav class="navbar navbar-expand-lg sticky-top {{ $navClass }}">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('dashboard') }}">
