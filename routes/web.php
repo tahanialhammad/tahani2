@@ -34,3 +34,4 @@ Route::middleware('auth')->group(function () {
 
 
 require __DIR__.'/auth.php';
+//lateste update before delete from laptop and npm run production uuuuuuuuuuuuuu
