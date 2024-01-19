@@ -1,10 +1,10 @@
 @extends('layouts.guest')
 @section('main')
-<div id="login" class="container-fluid bg-white">
-    <div class="row vh-100 p-5">
-        <div class="col-lg-6 bg-white">
-            <img src="/images/svglogo.svg" alt="logo" class=" logo add-pointer"
-            onclick="location.href='{{ url('login') }}'">
+<div class="vh-100">
+    <div class="row h-100 g-0">
+        <div id="login" class="col bg-white">
+        <div>
+        <img src="/images/svglogo.svg" alt="tahanina logo" class="m-4 logo add-pointer" onclick="location.href='{{ url('login') }}'">
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="w-100 m-2" style="max-width: 380px;">
                        <!-- Session Status -->
@@ -34,11 +34,23 @@
                 </div>
             </div>
         </div>
+        </div>
 
         @include('auth.marketing')
     </div>
-</div>
-@stop
+    @stop
+
+
+
+
+
+
+
+
+
+
+
+
 
 {{-- <x-guest-layout>
     <x-auth-card>

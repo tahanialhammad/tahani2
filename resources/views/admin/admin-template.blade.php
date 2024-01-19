@@ -9,8 +9,8 @@
     <div id="app">
         @include('admin.partials.topbar')
         <div class="p-4">
-             {{-- @yield('submenu') --}}
-             @yield('content')
+            {{-- @yield('submenu') --}}
+            @yield('content')
         </div>
     </div>
 </section>
