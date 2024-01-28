@@ -1,11 +1,10 @@
-
 @extends('admin.admin-template')
 
 
 @section('content')
 {{-- @include('snippets.flash') --}}
 <div id="dashboard">
-    <div class="col-xl-9 page-title-v2 pt-4 ps-4">
+    <div class="col-xl-9 page-title pt-4 ps-4">
         <h3 class="fw-bold m-0">
             Hallo {{ \Auth::user()->name }}
         </h3>
@@ -18,12 +17,9 @@
             @include('admin.dashboard.partials.invoices')
         </div>
 
-
         <div class="col-xl-3 px-lg-4 p-4">
-            {{-- @include('v2.user.dashboards.portlets.news')
-
-
-            @include('v2.user.dashboards.portlets.faq') --}}
+            @include('admin.dashboard.partials.newestServices')
+            @include('admin.dashboard.partials.newestClients')
         </div>
     </div>
 </div>
