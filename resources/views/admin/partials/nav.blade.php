@@ -6,6 +6,16 @@
                 'icon' => '<icon-home class="icon icon-inverted"></icon-home>'
             ],
             [
+                'name' => 'Customers',
+                'route' => 'dashboard',
+                'icon' => '<icon-user class="icon icon-inverted"></icon-user>'
+            ],
+            [
+                'name' => 'Services',
+                'route' => 'dashboard',
+                'icon' => '<icon-service class="icon icon-inverted"></icon-service>'
+            ],
+            [
                 'name' => 'Helpcenter',
                 'route' => 'admin.faq.index',
                 'icon' => '<icon-info class="icon icon-inverted"></icon-info>'

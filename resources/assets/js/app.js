@@ -22,6 +22,9 @@ import IconBack from './components/icons/IconBack.vue'
 import IconHome from './components/icons/IconHome.vue'
 import IconInfo from './components/icons/IconInfo.vue'
 import IconSearch from './components/icons/IconSearch.vue'
+import IconUser from './components/icons/IconUser.vue'
+import IconService from './components/icons/IconService.vue'
+
 
 createApp({
     components: {
@@ -31,6 +34,8 @@ createApp({
         IconBack,
         IconHome,
         IconInfo,
-        IconSearch
+        IconSearch,
+        IconUser,
+        IconService
     }
 }).mount('#app')
