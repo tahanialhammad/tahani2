@@ -3,8 +3,8 @@
 <div class="vh-100">
     <div class="row h-100 g-0">
         <div id="login" class="col bg-white">
-        <div>
-                <img src="/images/svglogo.svg" alt="logo" class="m-4 logo add-pointer"
+        <div class="d-flex justify-content-center align-items-center h-100 position-relative">
+                <img src="/images/svglogo.svg" alt="logo" class="m-4 logo add-pointer position-absolute top-0 start-0"
                     onclick="location.href='{{ url('login') }}'">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="w-100 m-2" style="max-width: 380px;">

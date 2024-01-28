@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\DashboardController;
 
@@ -15,6 +16,10 @@ Route::controller(SiteController::class)->group(function () {
 
 // Auth only admin
 Route::middleware('is_admin')->group(function () {   
+    // Service
+    Route::get('/service', [ServiceController::class, 'index'])->name('admin.service.index');
+    Route::post('service/add', [ServiceController::class, 'createService'])->name('admin.service.createService');
+
     // FAQ
     Route::get('/faq', [FaqController::class, 'index'])->name('admin.faq.index');
     Route::post('faq/section/edit', [FaqController::class, 'addOrEditSection'])->name('admin.faq.addOrEditSection');

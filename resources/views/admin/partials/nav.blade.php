@@ -12,7 +12,7 @@
             ],
             [
                 'name' => 'Services',
-                'route' => 'dashboard',
+                'route' => 'admin.service.index',
                 'icon' => '<icon-service class="icon icon-inverted"></icon-service>'
             ],
             [

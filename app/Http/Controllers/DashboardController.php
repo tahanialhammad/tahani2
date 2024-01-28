@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Services;
 
 class DashboardController extends Controller
 {
@@ -21,10 +22,20 @@ class DashboardController extends Controller
 
     private function showAdminDashboard()
     {
-        return view('admin.dashboard.index', []);
+       
+        return view('admin.dashboard.index', [
+            'serviceItems'         => $this->retrieveServiceItems(),
+        ]);
     }
     private function showUserDashboard()
     {
         return view('user.dashboard.index', []);
+    }
+
+
+    public function retrieveServiceItems()
+    {
+        $items = Services::all()->sortByDesc('created_at')->take(2);
+        return $items;
     }
 }
