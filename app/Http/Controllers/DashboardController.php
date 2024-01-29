@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use App\Models\Services;
+use App\Models\Service;
 
 class DashboardController extends Controller
 {
@@ -35,7 +35,7 @@ class DashboardController extends Controller
 
     public function retrieveServiceItems()
     {
-        $items = Services::all()->sortByDesc('created_at')->take(2);
+        $items = Service::all()->sortByDesc('created_at')->take(2);
         return $items;
     }
 }

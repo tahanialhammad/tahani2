@@ -18,7 +18,8 @@ Route::controller(SiteController::class)->group(function () {
 Route::middleware('is_admin')->group(function () {   
     // Service
     Route::get('/service', [ServiceController::class, 'index'])->name('admin.service.index');
-    Route::post('service/add', [ServiceController::class, 'createService'])->name('admin.service.createService');
+    Route::post('service/add', [ServiceController::class, 'addOrEditService'])->name('admin.service.addOrEditService');
+    Route::delete('service/{service}', [ServiceController::class, 'deleteService'])->name('admin.service.deleteService');
 
     // FAQ
     Route::get('/faq', [FaqController::class, 'index'])->name('admin.faq.index');
