@@ -26,6 +26,8 @@ import IconUser from './components/icons/IconUser.vue'
 import IconService from './components/icons/IconService.vue'
 import IconEmpty from "./components/icons/IconEmpty.vue"
 import IconAdd from "./components/icons/IconAdd.vue"
+import IconDelete from "./components/icons/IconDelete.vue"
+import IconEdit from "./components/icons/IconEdit.vue"
 
 createApp({
     components: {
@@ -39,6 +41,8 @@ createApp({
         IconUser,
         IconService,
         IconEmpty,
-        IconAdd
+        IconAdd,
+        IconDelete,
+        IconEdit
     }
 }).mount('#app')

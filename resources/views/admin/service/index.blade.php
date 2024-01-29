@@ -5,28 +5,7 @@
     <h3 class="fw-bold m-0"> All services</h3>
 
     @include('admin.service.partials.create')
-
-
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <div class="row p-0 g-0">
     <div class="col-xl-7">
@@ -38,12 +17,23 @@
         @endphp
         <div class="card mb-3 p-4">
           <div class="card-body p-0" id="{{ $serviceItem->id }}">
-            <h5 class="card-title fw-bold mb-3">
-              {{ $serviceItem->title }}
-            </h5>
+            <div class="card-title mb-3 d-flex justify-content-between align-items-center">
+              <h5 class="fw-bold">
+                {{ $serviceItem->title }}
+              </h5>
+              <div class="d-flex">
+                @include('admin.service.partials.edit')
+                <form method="POST" action="{{ route('admin.service.deleteService', $serviceItem->id) }}">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-link"> <icon-delete class="icon-sm icon-dark"></icon-delete></button>
+                </form>
+              </div>
+            </div>
+
             <p class="text-muted fw-bold fs-sm">{{ $created->format('d M Y') }}</p>
             <div class="card-text m-0">
-               {{ $serviceItem->body }}
+              {{ $serviceItem->body }}
               <div>array of packages</div>
             </div>
           </div>
@@ -57,8 +47,6 @@
           </div>
         </div>
         @endforelse
-
-
       </div>
     </div>
   </div>
