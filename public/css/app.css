@@ -12814,7 +12814,7 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   width: 300px;
   height: 100%;
   background: #7264c0;
-  border-left: 10px solid #7264c0;
+  border-left: 5px solid #7264c0;
   transition: 0.5s;
   overflow: hidden;
 }
@@ -12823,6 +12823,7 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   top: 0;
   left: 0;
   width: 100%;
+  padding-left: 5px;
 }
 .user-navigation ul li {
   position: relative;
@@ -12897,7 +12898,7 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   pointer-events: none;
 }
 
-.user-navigation .active-menu {
+.active-menu {
   width: 80px;
 }
 
@@ -12909,7 +12910,7 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   transition: 0.5s;
 }
 
-.user-main .active-menu {
+.active-user-main {
   width: calc(100% - 80px);
   left: 80px;
 }
