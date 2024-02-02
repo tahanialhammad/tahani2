@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <a type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editServiceModal-{{ $serviceItem->id }}">
-  <icon-edit class="icon-sm icon-dark"></icon-edit>
+  <icon-edit class="icon icon-dark"></icon-edit>
 </a>
 
 <!-- Modal -->
