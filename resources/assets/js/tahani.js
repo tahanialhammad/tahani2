@@ -41,9 +41,9 @@ function activeLink(){
 list.forEach ((item) => item.addEventListener("mouseover",activeLink ));
 
 // user menu toggle
-let userToggle = document.querySelector(".user-toggle");
-let userNavigation = document.querySelector(".user-navigation");
-let userMain =  document.querySelector(".user-main");
+// let userToggle = document.querySelector(".user-toggle");
+// let userNavigation = document.querySelector(".user-navigation");
+// let userMain =  document.querySelector(".user-main");
 
 // userToggle.onclick = function(){
 //     alert('hi');
@@ -52,9 +52,18 @@ let userMain =  document.querySelector(".user-main");
 // }
 
 
+// $(document).on('click', '.user-toggle', function () {
+//    //  alert('hi'); 
+//    // userNavigation.classList.toggle('active-menu');
+//     userMain.addClass('bg-danger');
+// });
+
+
 $(document).on('click', '.user-toggle', function () {
-    // alert('hi'); 
-    userNavigation.classList.toggle('active-menu');
-    userMain.classList.toggle('active-menu');
+    const userMain = $('.user-main'),
+    userNavigation = $('.user-navigation');
+
+    userMain.toggleClass('active-user-main');
+    userNavigation.toggleClass('active-menu');
 
 });

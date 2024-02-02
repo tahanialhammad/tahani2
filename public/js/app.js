@@ -24111,9 +24111,9 @@ list.forEach(function (item) {
 });
 
 // user menu toggle
-var userToggle = document.querySelector(".user-toggle");
-var userNavigation = document.querySelector(".user-navigation");
-var userMain = document.querySelector(".user-main");
+// let userToggle = document.querySelector(".user-toggle");
+// let userNavigation = document.querySelector(".user-navigation");
+// let userMain =  document.querySelector(".user-main");
 
 // userToggle.onclick = function(){
 //     alert('hi');
@@ -24121,10 +24121,17 @@ var userMain = document.querySelector(".user-main");
 //     userMain.classList.toggle('active-menu');
 // }
 
+// $(document).on('click', '.user-toggle', function () {
+//    //  alert('hi'); 
+//    // userNavigation.classList.toggle('active-menu');
+//     userMain.addClass('bg-danger');
+// });
+
 $(document).on('click', '.user-toggle', function () {
-  // alert('hi'); 
-  userNavigation.classList.toggle('active-menu');
-  userMain.classList.toggle('active-menu');
+  var userMain = $('.user-main'),
+    userNavigation = $('.user-navigation');
+  userMain.toggleClass('active-user-main');
+  userNavigation.toggleClass('active-menu');
 });
 
 /***/ }),
