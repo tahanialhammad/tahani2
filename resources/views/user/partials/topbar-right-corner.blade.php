@@ -15,14 +15,11 @@
     </div>
 
     <div class="dropdown">
-        <button class="btn btn-link  text-decoration-none dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <div class="user-account">
-                {{ Auth::user()->name }}
-                <img src="https://picsum.photos/id/237/50/50" alt="">
-                <ion-icon name="person-outline"></ion-icon>
-            </div>
+        <button class="btn btn-link text-decoration-none dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ Auth::user()->name }}
+            <img class="rounded-circle" src="https://picsum.photos/id/237/50/50" alt="">
         </button>
-        
+
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li>
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
