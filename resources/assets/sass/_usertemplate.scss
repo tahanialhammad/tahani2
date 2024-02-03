@@ -7,7 +7,7 @@ $user-blue: #7264c0;
     height: 100%;
     background: $user-blue;
     border-left: 5px solid $user-blue;
-    transition: 0.5s;
+    transition: 0.3s;
     overflow: hidden;
 
     ul {
@@ -113,7 +113,7 @@ $user-blue: #7264c0;
     width: calc(100% - 300px);
     left: 300px;
     min-height: 100vh;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .active-user-main {

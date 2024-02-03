@@ -1,23 +1,33 @@
-<nav class="h-100 overflow-hiddenttt overflow-auto">
-    <div>
-        <!-- brand -->
-        <div class="mt-4">
-            <a href="/">
-                <div class="SidebarLogo"></div>
+@php
+$navLinks= collect([
+[
+'name' => 'Dashboard',
+'route' => 'dashboard',
+'icon' => '<ion-icon name="speedometer-outline"></ion-icon>'
+],
+[
+'name' => 'My order',
+'route' => 'admin.service.index',
+'icon' => '<ion-icon name="qr-code-outline"></ion-icon>'
+],
+[
+'name' => 'Helpcenter',
+'route' => 'admin.faq.index',
+'icon' => '<ion-icon name="information-circle-outline"></ion-icon>'
+],
+]);
+
+@endphp
+
+    <ul>
+        @foreach ($navLinks as $navLink)
+        <li>
+            <a href="{{ route($navLink['route']) }}">
+                <span class="user-icon">
+                    {!! $navLink['icon'] !!}
+                </span>
+                <span class="user-title">{{ $navLink['name']}}</span>
             </a>
-        </div>
-        <!-- / brand -->
-
-        <ul class="nav flex-column flex-nowrap text-capitalize mt-5">
-            <li class="nav-item">
-                <a class="nav-link d-flex align-items-center text-white" href="/">
-                    <svg class="icon icon-inverted" viewBox="0 0 11.6 11.6">
-                        <path d="M5.8 1.6l4.5 3.7v4.9h-9V5.4l4.5-3.8m0-1.6L0 4.8v6.8h11.6V4.8L5.8 0z" class="st0"/>
-                    </svg>
-                    <span class="ps-3">welcom user nav</span>
-                </a>
-            </li>
-        </ul>
-
-    </div>
-</nav>
+        </li>
+        @endforeach
+    </ul>
