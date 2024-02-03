@@ -1,4 +1,4 @@
-<header class="topbar sticky-top p-4 d-flex align-items-center justify-content-between bg-white text-dark">
+<header class="user-topbar w-100 d-flex justify-content-between align-items-center px-0 py-2">
 
     @include('user.partials.topbar-left-corner')
 

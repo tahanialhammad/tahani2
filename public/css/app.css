@@ -12815,7 +12815,7 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   height: 100%;
   background: #7264c0;
   border-left: 5px solid #7264c0;
-  transition: 0.5s;
+  transition: 0.3s;
   overflow: hidden;
 }
 .user-navigation ul {
@@ -12907,7 +12907,7 @@ header.topbar .dropdown .dropdown-menu .dropdown-item:hover {
   width: calc(100% - 300px);
   left: 300px;
   min-height: 100vh;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .active-user-main {
