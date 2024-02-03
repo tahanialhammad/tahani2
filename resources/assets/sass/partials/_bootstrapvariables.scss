@@ -9,10 +9,12 @@ $color-yellow: #fce3a6;
 $color-green: #1ddcbf;
 $color-mattewhite: #eaebed;
 $color-purple: #6476fc;
+$user-blue: #7264c0;
 
 //Bootstrap overwrite Theme colors
 $primary: $color-darkgrey;
-$secondary: $color-lightgrey;
+// $secondary: $color-lightgrey;
+$secondary: $user-blue;
 $success:$color-green;
 $info: $color-purple;
 $warning: $color-yellow;
