@@ -233,3 +233,22 @@
     //     }
     // }
 }
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (max-width: 768px){
+    .user-navigation {
+        width: 80px;
+        left: 0;
+    }
+    .active-menu {
+        width: 0;
+    }
+    .user-main {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+    .active-user-main {
+        width: 100%;
+        left: 0;
+    }
+}
