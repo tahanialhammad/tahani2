@@ -3,17 +3,13 @@
 
 @section('content')
 {{-- @include('snippets.flash') --}}
-<div id="dashboard">
-    <div class="col-xl-9 page-title pt-4 ps-4">
-        <h3 class="fw-bold m-0">
-            Hallo {{ \Auth::user()->name }}
-        </h3>
+<div id="user-dashboard">
+    <div class="col my-4">
+    @include('user.dashboard.partials.overview')
     </div>
-
 
     <div class="row g-0">
         <div class="col-xl-9 p-4">
-            @include('user.dashboard.partials.overview')
             @include('user.dashboard.partials.invoices')
         </div>
 

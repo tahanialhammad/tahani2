@@ -16,6 +16,8 @@ import { createApp } from 'vue'
 import ExampleComponent from './components/ExampleComponent.vue'
 import RealTimeSearch from './components/RealTimeSearch.vue'
 import GlideSlider from './components/GlideSlider.vue'
+import OrdersPerMonthChart from './components/graphs/OrdersPerMonthChart.vue'
+
 
 //Icons
 import IconBack from './components/icons/IconBack.vue'
@@ -34,6 +36,7 @@ createApp({
         ExampleComponent,
         RealTimeSearch,
         GlideSlider,
+        OrdersPerMonthChart,
         IconBack,
         IconHome,
         IconInfo,

@@ -1,12 +1,12 @@
 // User Template
-// $user-blue: #7264c0;
+// $color-purple: #7264c0;
 
 .user-navigation {
     position: fixed;
     width: 300px;
     height: 100%;
-    // background: $user-blue;
-    border-left: 5px solid $user-blue;
+    // background: $color-purple;
+    border-left: 5px solid $color-purple;
     transition: 0.3s;
     overflow: hidden;
 
@@ -66,7 +66,7 @@
             background-color: $light;
 
             a {
-                color: $user-blue;
+                color: $color-purple;
             }
 
             & a::before {
@@ -234,19 +234,37 @@
     // }
 }
 
+
+#user-dashboard {
+    #user-overview {
+        .card {
+            min-width: 200px;
+
+            &:hover {
+                background-color: $color-purple;
+                color: white;
+                transition: .5s;
+            }
+        }
+    }
+}
+
 /* ===== MEDIA QUERIES=====*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .user-navigation {
         width: 80px;
         left: 0;
     }
+
     .active-menu {
         width: 0;
     }
+
     .user-main {
         width: calc(100% - 80px);
         left: 80px;
     }
+
     .active-user-main {
         width: 100%;
         left: 0;

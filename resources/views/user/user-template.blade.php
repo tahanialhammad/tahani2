@@ -3,7 +3,7 @@
 
 
 <div class="position-relative w-100">
-    <aside class="user-navigation bg-secondary">
+    <aside class="user-navigation bg-info">
         @include('user.partials.nav')
     </aside>
 
