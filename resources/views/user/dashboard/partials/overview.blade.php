@@ -1,30 +1,61 @@
-<div class="mt-4 pt-2">
-   <h5 class="fw-bold mb-4">
-       {{ trans('menu.actions') }}
-   </h5>
+@php
+$cardInfos= collect([
+[
+'title' => 'Dashboard',
+'route' => 'dashboard',
+'icon' => '<ion-icon name="speedometer-outline"></ion-icon>',
+'text' => 'This is a wider card with supporting te'
+],
+[
+'title' => 'Dashboard',
+'route' => 'dashboard',
+'icon' => '<ion-icon name="speedometer-outline"></ion-icon>',
+'text' => 'This is a wider card with supporting te'
+],
+[
+'title' => 'Dashboard',
+'route' => 'dashboard',
+'icon' => '<ion-icon name="speedometer-outline"></ion-icon>',
+'text' => 'This is a wider card with supporting te'
+],
+[
+'title' => 'Dashboard',
+'route' => 'dashboard',
+'icon' => '<ion-icon name="speedometer-outline"></ion-icon>',
+'text' => 'This is a wider card with supporting te'
+],
+[
+'title' => 'Dashboard',
+'route' => 'dashboard',
+'icon' => '<ion-icon name="speedometer-outline"></ion-icon>',
+'text' => 'This is a wider card with supporting te'
+],
+[
+'title' => 'Dashboard',
+'route' => 'dashboard',
+'icon' => '<ion-icon name="speedometer-outline"></ion-icon>',
+'text' => 'This is a wider card with supporting te'
+],
+]);
 
-<div class="card-grouptt d-flex overflow-scroll scrollbar-toptt pb-4">
+@endphp
 
-  <div class="card p-4 rounded shadow me-4">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div id="user-overview" class="p-4">
+  <h5 class="fw-bold mb-4">
+    {{ trans('menu.actions') }}
+  </h5>
+
+  <div class="d-flex overflow-auto pb-4">
+    @foreach ($cardInfos as $cardInfo)
+    <div class="card p-4 rounded shadow me-4">
+      <div class="card-body">
+        <h5 class="card-title d-flex justify-content-between align-items-center">
+          {{ $cardInfo['title']}}
+          {!! $cardInfo['icon'] !!}
+        </h5>
+        <p class="card-text">{{ $cardInfo['text']}}</p>
+      </div>
     </div>
+    @endforeach
   </div>
-  <div class="card p-4 rounded shadow me-4">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card p-4 rounded shadow me-4">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
 </div>

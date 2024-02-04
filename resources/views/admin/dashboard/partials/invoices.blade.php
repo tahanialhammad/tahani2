@@ -1,4 +1,5 @@
 <div class="mt-4">
+<orders-per-month-chart :appordersdata='[5, 12, 11, 13, 5, 12, 10, 15, 15, 18, 5, 9]'></orders-per-month-chart>
     <h3>Invoices</h3>
     <table class="table">
         <thead>
