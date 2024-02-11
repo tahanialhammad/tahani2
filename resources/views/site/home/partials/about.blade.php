@@ -4,6 +4,7 @@
         <p class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quisquam quidem aspernatur aliquam dolorem vel dicta doloribus incidunt, nihil obcaecati facere illo ab eligendi magnam, architecto eum ad, voluptatibus non.</p>
     </div>
     <div class="col" >
+        <!-- https://michalsnik.github.io/aos/  CDN in site layout-->
         <img src="/images/about.svg" alt=""   
         data-aos="fade-left"
          data-aos-delay="50"
