@@ -19,15 +19,20 @@ $navLinks= collect([
 
 @endphp
 
-    <ul>
-        @foreach ($navLinks as $navLink)
-        <li>
-            <a href="{{ route($navLink['route']) }}">
-                <span class="user-icon">
-                    {!! $navLink['icon'] !!}
-                </span>
-                <span class="user-title">{{ $navLink['name']}}</span>
-            </a>
-        </li>
-        @endforeach
-    </ul>
+<ul>
+    <li>
+        <a href="/">
+            <span class="user-title">logo</span>
+        </a>
+    </li>
+    @foreach ($navLinks as $navLink)
+    <li class="{{ request()->routeIs($navLink['route']) ? 'hoverred' : ''}} mb-1">
+        <a href="{{ route($navLink['route']) }}">
+            <span class="user-icon">
+                {!! $navLink['icon'] !!}
+            </span>
+            <span class="user-title">{{ $navLink['name']}}</span>
+        </a>
+    </li>
+    @endforeach
+</ul>
