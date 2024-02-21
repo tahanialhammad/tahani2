@@ -9,16 +9,22 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use App\Models\Faq;
+use App\Models\User;
 use App\Models\FaqSection;
 
 
 class AdminController extends Controller
 {
 
-    public function faq()
+    public function accounts()
     {
-        $sections =  FaqSection::all();
-        return view('admin.faq.index', compact('sections'));
+        $accounts =  User::all();
+        return view('admin.accounts.index',  compact('accounts'));
     }
+    // public function faq()
+    // {
+    //     $sections =  FaqSection::all();
+    //     return view('admin.faq.index', compact('sections'));
+    // }
+
 }

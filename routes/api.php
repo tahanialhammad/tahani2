@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use CloudCreativity\LaravelJsonApi\Facades\JsonApi;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
