@@ -7,7 +7,7 @@
             ],
             [
                 'name' => 'Customers',
-                'route' => 'dashboard',
+                'route' => 'admin.accounts.index',
                 'icon' => '<icon-user class="icon icon-inverted"></icon-user>'
             ],
             [

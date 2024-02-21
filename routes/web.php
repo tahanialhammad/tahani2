@@ -16,6 +16,9 @@ Route::controller(SiteController::class)->group(function () {
 
 // Auth only admin
 Route::middleware('is_admin')->group(function () {   
+    // accounts
+    Route::get('/accounts', [AdminController::class, 'accounts'])->name('admin.accounts.index');
+
     // Service
     Route::get('/service', [ServiceController::class, 'index'])->name('admin.service.index');
     Route::post('service/add', [ServiceController::class, 'addOrEditService'])->name('admin.service.addOrEditService');
