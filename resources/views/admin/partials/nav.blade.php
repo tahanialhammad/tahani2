@@ -47,7 +47,7 @@
 
         <ul class="nav flex-column flex-nowrap text-capitalize mt-5">
             @foreach ($navLinks as $navLink)
-            <li class="nav-item">
+            <li class="nav-item  {{ request()->routeIs($navLink['route']) ? 'active' : ''}}">
                 <a class="nav-link d-flex align-items-center text-white" href="{{ route($navLink['route']) }}">
                     {!! $navLink['icon'] !!}
                     <span class="ps-3">{{ $navLink['name']}}</span>
