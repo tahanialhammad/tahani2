@@ -9,51 +9,106 @@ import Chart from 'chart.js/auto';
 
 export default {
   name: 'ChartComponent',
+  props: ['chartdata'],
+  data() {
+    return {
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    }
+  },
   mounted() {
     this.renderChart();
   },
   methods: {
     renderChart() {
       const ctx = document.getElementById('myChart').getContext('2d');
+      let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+
+      gradient.addColorStop(0, 'rgba(29, 220,191, 0.2)');
+      gradient.addColorStop(1, 'rgba(255, 255,255, 0)');
+
       const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: this.months,
           datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
+            label: 'Customers',
+            data: this.chartdata,
+            backgroundColor: gradient,
+            fill: true,
+            borderWidth: 2,
+            borderColor: '#1ddcbf',
+            pointBackgroundColor: '#1ddcbf',
+            pointBorderColor: 'white',
+            pointBorderWidth: 2,
+            pointStyle: 'circle',
+            pointRadius: 4,
           }]
         },
         options: {
-          scales: {
-            y: {
-              beginAtZero: true
+          responsive: true,
+          maintainAspectRatio: false,
+          title: {
+            display: false,
+          },
+          elements: {
+            line: {
+              tension: 0.4
             }
-          }
-        }
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  fontColor: "#b2b7be",
+                  fontFamily: "montserrat",
+                  fontStyle: "bold",
+                  align: 'start',
+                  padding: 15
+                },
+                gridLines: {
+                  display: true,
+                  drawBorder: false,
+                  color: "#eaebed"
+                }
+              }
+            ],
+            xAxes: [
+              {
+                ticks: {
+                  fontColor: "#333840",
+                  fontFamily: "montserrat",
+                  //fontSize: 18,
+                  fontStyle: "bold",
+                  padding: 15
+                },
+                gridLines: {
+                  display: false,
+                  // color: "#333840"
+                }
+              }
+            ],
+          },
+          legend: {
+            display: false,
+            // labels: {
+            //   fontColor: "red",
+            //   fontSize: 16,
+            // }
+          },
+          tooltips: {
+            titleFontFamily: 'Montserrat',
+            backgroundColor: '#333840',
+            bodyFontColor: 'white',
+            bodyFontFamily: 'Montserrat',
+            caretSize: 10,
+            cornerRadius: 10,
+            xPadding: 20,
+            yPadding: 20,
+            usePointStyle: true,
+          },
+        },
       });
     }
   }
 };
 </script>
-
-<style>
-/* Add your custom styles here */
-</style>

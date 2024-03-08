@@ -1,5 +1,7 @@
 <div class="mt-4">
-<orders-per-month-chart :appordersdata='[5, 12, 11, 13, 5, 12, 10, 15, 15, 18, 5, 9]'></orders-per-month-chart>
+    <!-- <orders-per-month-chart :chartdata="[1,5,8,2]" ></orders-per-month-chart> -->
+    <orders-per-month-chart :chartdata="{{ json_encode($monthCount) }}"></orders-per-month-chart>
+
     <h3>Invoices</h3>
     <table class="table">
         <thead>
@@ -8,21 +10,29 @@
                 <th scope="col">Invoices No</th>
                 <th scope="col">Customer</th>
                 <th scope="col">Price</th>
+                <th scope="col">Stats</th>
             </tr>
         </thead>
         <tbody>
+            @forelse($invoices as $invoice)
+
             <tr>
-                <th scope="row">1</th>
-                <td>00125</td>
-                <td>Mark</td>
-                <td>400 €</td>
+                <th scope="row">{{ $invoice->id }}</th>
+                <td>{{ $invoice->invoice_number }}</td>
+                <td>{{ $invoice->user_id }} - {{ $invoice->user->name }} </td>
+                <td>{{ $invoice->amount }} €</td>
+                <td>
+                    <span class="badge rounded-pill {{ $invoice->paid ? ' bg-success' :' bg-secondary' }}">
+                        <span class="visually-hidden">{{ $invoice->paid ? 'Paid' :'Not paid' }} </span>
+                    </span>
+                </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>00245</td>
-                <td>Jacob</td>
-                <td>1500 €</td>
-            </tr>
+
+            @empty
+
+            no invoice
+            @endforelse
+
         </tbody>
     </table>
 </div>
