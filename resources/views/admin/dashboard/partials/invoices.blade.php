@@ -14,18 +14,19 @@
             </tr>
         </thead>
         <tbody>
+            <!-- If i use Eloquent models and the InvoiceResource class i'll access the invoice properties using object syntax $invoice->user->name : rather than array syntax with InvoiceRepository -->
             @forelse($invoices as $invoice)
-
             <tr>
-                <th scope="row">{{ $invoice->id }}</th>
-                <td>{{ $invoice->invoice_number }}</td>
-                <td>{{ $invoice->user_id }} - {{ $invoice->user->name }} </td>
-                <td>{{ $invoice->amount }} €</td>
+                <th scope="row">{{ $invoice['id'] }}</th>
+                <td>{{ $invoice['invoice_number'] }}</td>
+                <td>{{ $invoice['user_id'] }} - {{ $invoice['user_name'] }} </td>
+                <td>{{ $invoice['amount'] }} €</td>
                 <td>
-                    <span class="badge rounded-pill {{ $invoice->paid ? ' bg-success' :' bg-secondary' }}">
-                        <span class="visually-hidden">{{ $invoice->paid ? 'Paid' :'Not paid' }} </span>
+                    <span class="badge rounded-pill {{ $invoice['paid'] ? ' bg-success' :' bg-secondary' }}">
+                        <span class="visually-hidden">{{ $invoice['paid'] ? 'Paid' :'Not paid' }} </span>
                     </span>
                 </td>
+                <td>{{$invoice['service_ids'] ? implode(', ', $invoice['service_ids']) : "-"}}</td>
             </tr>
 
             @empty

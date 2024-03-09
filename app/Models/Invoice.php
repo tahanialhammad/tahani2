@@ -10,6 +10,10 @@ class Invoice extends Model
     use HasFactory;
     protected $guarded = [];
 
+    protected $casts = [
+        'service_ids' => 'array',
+    ];
+    
     public function user()
     {
         return $this->belongsTo(User::class);
