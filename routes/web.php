@@ -15,7 +15,7 @@ Route::controller(SiteController::class)->group(function () {
 });
 
 // Auth only admin
-Route::middleware('is_admin')->group(function () {   
+Route::middleware(['auth', 'is_admin'])->group(function () {   
     // accounts
     Route::get('/accounts', [AdminController::class, 'accounts'])->name('admin.accounts.index');
 

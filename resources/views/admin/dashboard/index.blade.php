@@ -19,7 +19,7 @@
 
         <div class="col-xl-3 px-lg-4 p-4">
             @include('admin.dashboard.partials.newestServices')
-            @include('admin.dashboard.partials.newestClients')
+            @include('admin.dashboard.partials.newestOrders')
         </div>
     </div>
 </div>

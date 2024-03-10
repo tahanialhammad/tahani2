@@ -1,6 +1,8 @@
     {{-- Packages --}}
     <div class="app-store col-10 mx-auto p-4">
-        <h1 class="fw-bold text-center mb-5">More than 10 Frontend packages</h1>
+        <h1 class="fw-bold text-center mb-5">
+        {{ trans('packages.our-packages') }}  
+       </h1>
         <div class="packages row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-6 g-4">
             @forelse($packages as $package)
                 <div class="col">
@@ -15,7 +17,7 @@
 
                         <div class="card-footer border-0 bg-transparent p-0">
                             <span class="badge rounded-pill bg-secondary">
-                                info
+                            {{ trans('general.info') }}  
                             </span>
                         </div>
 
@@ -28,14 +30,14 @@
                                 example</a>
 
                             <a href="" class="fs-sm" target="_blank">
-                                more info
+                            {{ trans('general.more-info') }}  
                             </a>
                         </div>
 
                     </div>
                 </div>
             @empty
-                no package
+            {{ trans('packages.no-package-available') }}  
             @endforelse
         </div>
     </div>

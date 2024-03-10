@@ -1,8 +1,12 @@
 <header class="">
     <div class="text-center bg-dark text-white py-4 min-vh-100">
-        <h1 class="fw-bold p-4 hero-title">Tahani webdeveloper with Laravel</h1>
-        <h5 class="w-50 mx-auto text-muted fs-4">This Laravel project contains my skills in handling some Laravel
-            Frontend and Backend packages</h5>
+        <h1 class="fw-bold p-4 hero-title">
+        {{ trans('general.about-me') }}  
+        </h1>
+        <h5 class="w-50 mx-auto text-muted fs-4">
+        {{ trans('general.about-my-projects') }}  
+          
+        </h5>
     </div>
 
     <div class="w-75 position-relative mx-auto" style="margin-top: -300px">
@@ -35,11 +39,11 @@
 
     <div class="d-flex justify-content-center align-items-center">
         <a href="" class="btn btn-sm btn-outline-dark rounded-pill px-4 py-2 border-2 fw-bold shadow-none">
-            Contact us
+        {{ trans('general.contact-us') }}
         </a>
   
         <a href="" class="btn btn-link fw-bold text-decoration-none shadow-none">
-            More about Tahani       
+        {{ trans('general.more-about-me') }}      
              <icon-back class="icon-md icon-dark icon-rotate"></icon-back>
         </a>
       

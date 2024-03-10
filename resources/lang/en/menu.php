@@ -1,5 +1,10 @@
 <?php
 
 return [
-    'actions' => "Actions",
+    'dashboard' => "Dashboard",
+    'customers' => "Customers",
+    'services' => "Services",
+    'helpcenter' => "Helpcenter",
+    'invoices' => "Invoices",
+    'orders' => "Orders",
 ];
