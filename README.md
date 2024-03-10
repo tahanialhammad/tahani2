@@ -20,5 +20,5 @@ Authenticated users have access to this interface upon logging in. It typically 
 
 - # Admin System Management Interface (CMS): 
 This interface is designed for administrators or users with elevated privileges to manage the system. It includes functionalities such as content management, user management, role management, analytics, and any administrative tasks required to maintain the application.
-
+<p align="center"><img src="/images/admin-screenshot.png"  alt="admin "></p>
 The combination of Laravel on the backend and various frontend technologies provides a robust and dynamic platform for building and managing web applications with distinct user interfaces tailored to different user roles and permissions.
