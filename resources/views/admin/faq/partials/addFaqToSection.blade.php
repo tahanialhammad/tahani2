@@ -1,13 +1,16 @@
 <div class="card p-4">
     <div class="card-body">
-        <h5 class="card-title">Add FAQ to a section</h5>
+        <h5 class="card-title">
+            {{ trans('helpcenter.add-faq-to-section')}}
+        </h5>
         <div>
             <form method="POST" role="form" action="{{ route('admin.faq.addOrEditFaq') }}">
                 @csrf
-
                 <div class="mb-3">
                     <select name="section" class="form-select shadow-none" required>
-                        <option selected>Open to select section</option>
+                        <option selected>
+                        {{ trans('helpcenter.select-section')}}                         
+                        </option>
                         @foreach ($sections as $section)
                             <option value="{{ $section->id }}">{{ $section->name }}</option>
                         @endforeach
@@ -37,7 +40,7 @@
                 <div class="text-end pt-3">
                     <button type="submit"
                         class="btn btn-outline-dark rounded-pill px-5 border-2 fw-bold mx-auto shadow-none">
-                        Add Faq
+                        {{ trans('helpcenter.add-faq')}}
                     </button>
                 </div>
             </form>

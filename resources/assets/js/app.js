@@ -31,6 +31,9 @@ import IconEmpty from "./components/icons/IconEmpty.vue"
 import IconAdd from "./components/icons/IconAdd.vue"
 import IconDelete from "./components/icons/IconDelete.vue"
 import IconEdit from "./components/icons/IconEdit.vue"
+import IconShop from "./components/icons/IconShop.vue"
+import IconInvoices from "./components/icons/IconInvoices.vue"
+
 
 createApp({
     components: {
@@ -48,6 +51,8 @@ createApp({
         IconEmpty,
         IconAdd,
         IconDelete,
-        IconEdit
+        IconEdit,
+        IconShop,
+        IconInvoices,
     }
 }).mount('#app')

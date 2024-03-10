@@ -2,7 +2,9 @@
 @section('content')
 <div>
   <div class="page-title d-flex justify-content-between align-items-center mb-4">
-    <h3 class="fw-bold m-0"> All services</h3>
+    <h3 class="fw-bold m-0">
+      {{ trans('services.all-services') }}
+    </h3>
 
     @include('admin.service.partials.create')
   </div>
@@ -34,7 +36,7 @@
             <p class="text-muted fw-bold fs-sm">{{ $created->format('d M Y') }}</p>
             <div class="card-text m-0">
               {{ $serviceItem->body }}
-              <div>array of packages</div>
+              <div>{{ trans ('packages.package-list')}}</div>
             </div>
           </div>
         </div>
@@ -42,7 +44,7 @@
 
         <div class="card mb-3 p-4">
           <div class="card-body p-0 text-center">
-            <h5>Ther is no services </h5>
+            <h5> {{ trans('services.no-services') }} </h5>
             <icon-empty></icon-empty>
           </div>
         </div>

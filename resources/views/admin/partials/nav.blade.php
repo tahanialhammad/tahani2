@@ -1,31 +1,40 @@
 @php
-     $navLinks= collect([
-            [
-                'name' => 'Dashboard',
-                'route' => 'dashboard',
-                'icon' => '<icon-home class="icon icon-inverted"></icon-home>'
-            ],
-            [
-                'name' => 'Customers',
-                'route' => 'admin.accounts.index',
-                'icon' => '<icon-user class="icon icon-inverted"></icon-user>'
-            ],
-            [
-                'name' => 'Services',
-                'route' => 'admin.service.index',
-                'icon' => '<icon-service class="icon icon-inverted"></icon-service>'
-            ],
-            [
-                'name' => 'Helpcenter',
-                'route' => 'admin.faq.index',
-                'icon' => '<icon-info class="icon icon-inverted"></icon-info>'
-            ],
-        ]);    
+$navLinks= collect([
+[
+'name' => trans('menu.dashboard'),
+'route' => 'dashboard',
+'icon' => '<icon-home class="icon icon-inverted"></icon-home>'
+],
+[
+'name' => trans('menu.customers'),
+'route' => 'admin.accounts.index',
+'icon' => '<icon-user class="icon icon-inverted"></icon-user>'
+],
+[
+'name' => trans('menu.invoices'),
+'route' => 'dashboard',
+'icon' => '<icon-invoices class="icon icon-inverted"></icon-invoices>'
+],
+[
+'name' => trans('menu.orders'),
+'route' => 'dashboard',
+'icon' => '<icon-shop class="icon icon-inverted"></icon-shop>'
+],
+[
+'name' => trans('menu.services'),
+'route' => 'admin.service.index',
+'icon' => '<icon-service class="icon icon-inverted"></icon-service>'
+],
+[
+'name' => trans('menu.helpcenter'),
+'route' => 'admin.faq.index',
+'icon' => '<icon-info class="icon icon-inverted"></icon-info>'
+],
+]);
 
 // $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
 
 // $obj = json_decode($jsonobj);
-
 
 
 @endphp
