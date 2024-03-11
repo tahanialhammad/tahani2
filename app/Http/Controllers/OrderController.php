@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
 
-class InvoiceController extends Controller
+class OrderController extends Controller
 {
     public function index()
     {
         $invoices = Invoice::all();
-        return view('admin.invoices.index', compact('invoices'));
+        return view('admin.orders.index', compact('invoices'));
     }
 
-    public function addOrEditInvoice(Request $request)
+    public function addOrEditOrder(Request $request)
     {
         //
     }
