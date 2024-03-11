@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\OrderController;
 
 // Site
 Route::controller(SiteController::class)->group(function () {
@@ -23,6 +25,14 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::get('/service', [ServiceController::class, 'index'])->name('admin.service.index');
     Route::post('service/add', [ServiceController::class, 'addOrEditService'])->name('admin.service.addOrEditService');
     Route::delete('service/{service}', [ServiceController::class, 'deleteService'])->name('admin.service.deleteService');
+
+    // Invoices
+    Route::get('/invoices', [InvoiceController::class, 'index'])->name('admin.invoice.index');
+    Route::post('invoices/add', [InvoiceController::class, 'addOrEditInvoice'])->name('admin.invoice.addOrEditInvoice');
+
+    // Orders
+    Route::get('/orders', [OrderController::class, 'index'])->name('admin.order.index');
+    Route::post('orderes/add', [OrderController::class, 'addOrEditOrder'])->name('admin.order.addOrEditOrder');
 
     // FAQ
     Route::get('/faq', [FaqController::class, 'index'])->name('admin.faq.index');

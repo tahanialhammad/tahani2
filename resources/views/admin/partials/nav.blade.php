@@ -12,12 +12,12 @@ $navLinks= collect([
 ],
 [
 'name' => trans('menu.invoices'),
-'route' =>   'admin.service.index',
+'route' =>   'admin.invoice.index',
 'icon' => '<icon-invoices class="icon icon-inverted"></icon-invoices>'
 ],
 [
 'name' => trans('menu.orders'),
-'route' =>  'admin.service.index',
+'route' =>  'admin.order.index',
 'icon' => '<icon-shop class="icon icon-inverted"></icon-shop>'
 ],
 [

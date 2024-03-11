@@ -1,6 +1,5 @@
 @extends('admin.admin-template')
 
-
 @section('content')
 {{-- @include('snippets.flash') --}}
 <div id="dashboard">
@@ -9,7 +8,6 @@
             Hallo {{ \Auth::user()->name }}
         </h3>
     </div>
-
 
     <div class="row g-0">
         <div class="col-xl-9 p-4">
