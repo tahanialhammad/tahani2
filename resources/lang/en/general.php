@@ -15,4 +15,7 @@ return [
     "new-projects" => "New projects",
     "active-users" => "Active users",
     "last-orders" => "Newest Orders",
+    "customer" => "Customer",
+    "price" => "Price",
+    "status" => "Status",
 ];

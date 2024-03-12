@@ -1,7 +1,9 @@
 @extends('site.site-template')
 
 @section('header')
+@include('site.home.partials.hero2')
 @include('site.home.partials.hero')
+
 @stop
 
 @section('content')

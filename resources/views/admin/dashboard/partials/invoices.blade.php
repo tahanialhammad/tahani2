@@ -15,10 +15,10 @@
                     <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Invoices No</th>
-                            <th scope="col">Customer</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Stats</th>
+                            <th scope="col">{{ trans("services.invoice-number")}}</th>
+                            <th scope="col">{{ trans("general.customer")}}</th>
+                            <th scope="col">{{ trans("general.price")}}</th>
+                            <th scope="col">{{ trans("general.status")}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,8 +38,10 @@
                         </tr>
 
                         @empty
-
-                        no invoice
+                        <tr>
+                            <td>
+                                {{ trans("services.no-invoices")}} </td>
+                        </tr>
                         @endforelse
 
                     </tbody>
