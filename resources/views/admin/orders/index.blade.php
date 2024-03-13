@@ -13,10 +13,10 @@
     </div>
 
     <div class="row g-0">
-        <div class="col-xl-9 p-4">
+        <div class="col-xl-9 mt-4 ">
         @include('admin.orders.partials.ordersTable')
         </div>
-        <div class="col-xl-3 px-lg-4 p-4">
+        <div class="col-xl-3 px-lg-4 mt-4">
             <orders-per-service :chartdata="[1,5,8,2]"></orders-per-service>
             other
         </div>

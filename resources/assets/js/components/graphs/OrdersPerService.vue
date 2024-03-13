@@ -12,7 +12,7 @@ export default {
   props: ['chartdata'],
   data() {
     return {
-      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      months: ["Vuejs", "React", "Laravel", "WordPress"]
     }
   },
   mounted() {
@@ -48,11 +48,20 @@ export default {
           }]
         },
         options: {
-          scales: {
-            y: {
-              beginAtZero: true
+          // https://www.chartjs.org/docs/latest/configuration/legend.html
+          plugins:{
+            legend:{
+              labels:{
+                usePointStyle : true,
+                pointStyle: "circle"
+              }
             }
-          }
+          },
+          // scales: {
+          //   y: {
+          //     beginAtZero: true
+          //   }
+          // }
         }
       });
     }

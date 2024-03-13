@@ -11,8 +11,8 @@
 
     <div class="glass-danger position-absolute translate-middle-x border rounded-circle text-center" style="width: 300px; height: 300px;  left: 30%; bottom: -70px ">
         <div class="text-white m-5">
-            <h3>Front-end</h3>
-            <p>Bootstrap or Tailwind with Vuejs or React</p>
+            <h3>Back-end</h3>
+            <p>PHP Laravel and MySQL</p>
             <button class="btn btn-light">more info</button>
         </div>
     </div>
@@ -27,8 +27,8 @@
 
     <div class="glass-gray position-absolute translate-middle-x border rounded-circle text-center" style="width: 300px; height: 300px; left: 60% ; bottom: -70px ">
         <div class="text-white m-5">
-            <h3>Front-end</h3>
-            <p>Bootstrap or Tailwind with Vuejs or React</p>
+            <h3>WordPress</h3>
+            <p>WordPress en Woocommerce website bouwen</p>
             <button class="btn btn-light">more info</button>
         </div>
     </div>
