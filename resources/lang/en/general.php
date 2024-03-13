@@ -18,4 +18,5 @@ return [
     "customer" => "Customer",
     "price" => "Price",
     "status" => "Status",
+    "action" => "Action",
 ];
