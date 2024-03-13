@@ -1,9 +1,9 @@
 <div class="card p-4 rounded shadow">
     <div class="card-body">
         <div class="card-title d-flex justify-content-between align-items-center">
-            <div class="fw-bold text-dark">orders</div>
+            <div class="fw-bold text-dark">Orders</div>
             <icon-add  class="icon-md icon-dark"></icon-add>
-            <icon-arrow-bold class="icon-md icon-dark icon-rotate"></icon-arrow-bold>
+           
         </div>
         <div>
             <table class="table">
@@ -14,6 +14,7 @@
                         <th scope="col">{{ trans("general.price")}}</th>
                         <th scope="col">{{ trans("services.service")}}</th>
                         <th scope="col">{{ trans("general.status")}}</th>
+                        <th scope="col text-center">{{ trans("general.action")}}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,11 @@
                         <td>{{ $order->price }} €</td>
                         <td>{{ $order->service->title }} </td>
                         <td>{{ $order->status }} </td>
+                        <td class="d-flex">
+                        @include('admin.orders.partials.edit')
+                        @include('admin.orders.partials.delete')
+                        @include('admin.orders.partials.download') 
+                        </td>
                     </tr>
                     @empty
                     <tr>
