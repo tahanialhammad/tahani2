@@ -34,6 +34,10 @@ import IconDelete from "./components/icons/IconDelete.vue"
 import IconEdit from "./components/icons/IconEdit.vue"
 import IconShop from "./components/icons/IconShop.vue"
 import IconInvoices from "./components/icons/IconInvoices.vue"
+import IconArrowBold from "./components/icons/IconArrowBold.vue"
+import IconRotate from "./components/icons/IconRotate.vue"
+
+
 
 
 createApp({
@@ -56,5 +60,7 @@ createApp({
         IconEdit,
         IconShop,
         IconInvoices,
+        IconArrowBold,
+        IconRotate,
     }
 }).mount('#app')
