@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- {{ allAccounts }} -->
         <table class="table">
             <thead>
                 <tr>
@@ -11,7 +12,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="account in allAccounts.data" :key="account.id">
+                 <!-- <tr v-for="(account, index) in allAccounts" :key="index"> -->
+                    <tr v-for="account in allAccounts.data" :key="account.id">
                     <th scope="row"> {{ account.id }}</th>
                     <td> {{ account.name }}</td>
                     <td> {{ account.email }}</td>
@@ -20,18 +22,52 @@
                         <icon-edit class="icon icon-dark"></icon-edit>
                         <icon-delete class="icon icon-dark"></icon-delete>
                     </td>
-                </tr>
+                </tr> 
 
             </tbody>
         </table>
     </div>
 </template>
+  
+
+
+
+
+
+
 
 <script>
 export default {
     data() {
         return {
             allAccounts: []
+        }
+    },
+    created() {
+        this.fetchAccounts();
+    },
+    methods: {
+        fetchAccounts() {
+            fetch('/api/usersapi')
+                .then(response => response.json())
+                .then(data => {
+                    this.allAccounts = data;
+                    console.log( this.allAccounts);
+                })
+                .catch(error => {
+                    console.error('Error fetching accounts:', error);
+                });
+        }
+    }
+};
+</script>
+
+<!-- goed -->
+<!-- <script>
+export default {
+    data() {
+        return {
+            allAccounts: { data: [] }
         }
     },
     created() {
@@ -51,4 +87,23 @@ export default {
         }
     }
 };
-</script>
+</script> -->
+
+
+<!-- <script>
+export default {
+    props: ['accounts'],
+
+    data() {
+        return {
+            //
+        }
+    },
+
+    computed: {
+        allAccounts() {
+            return this.accounts;
+        }
+    }
+};
+</script> -->
