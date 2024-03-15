@@ -77,10 +77,3 @@ aside.collapsed{
     transition: .5s;
   }
 }
-
-
-.versionSwitch{
-  a {background-color: $nav-component-active-bg;
-    margin-left:  19px;
-    &:hover{background-color: #2b3036;}}
-}
