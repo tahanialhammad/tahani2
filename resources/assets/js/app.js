@@ -37,6 +37,8 @@ import IconInvoices from "./components/icons/IconInvoices.vue"
 import IconArrowBold from "./components/icons/IconArrowBold.vue"
 import IconRotate from "./components/icons/IconRotate.vue"
 
+// All in one 
+import Icon from "./components/icons/Icon.vue"
 
 
 
@@ -62,5 +64,7 @@ createApp({
         IconInvoices,
         IconArrowBold,
         IconRotate,
+        // all in one
+        Icon,
     }
 }).mount('#app')
