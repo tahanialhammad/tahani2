@@ -26,34 +26,3 @@
     }
   }
   
-  .app-store {
-    //height: 75vh;
-    .card {
-      border: 2px solid $color-white;
-      border-radius: 15px;
-      transition: 0.5s;
-  
-      &:hover {
-        border: 2px solid $color-mattewhite;
-      }
-  
-      img {
-        height: 78px;
-        width: 78px;
-        border-radius: 15px;
-      }
-    }
-    .packages{
-      .card{
-          &:hover{
-          border: 2px solid $dark !important;
-          .btn-outline-dark{
-            background-color: $dark;
-            color: white;
-          }
-        }
-      }
-     
-    }
-  }
-  
