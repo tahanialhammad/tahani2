@@ -21,7 +21,7 @@
                         <a href="">
                             <div class="card h-100 text-center shadow">
                                 <div class="card-body py-5 ">
-                                    <icon-home class="icon-xxl icon-light mb-5"></icon-home>
+                                    <icon icon-name="home" class="icon-xxl icon-light mb-5"></icon>
                                     <h4 class="card-title fw-bold">{{ $section->name }}</h4>
                                 </div>
                             </div>

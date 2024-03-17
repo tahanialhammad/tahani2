@@ -42,7 +42,7 @@
 
         <a href="" class="btn btn-link fw-bold text-decoration-none shadow-none">
             {{ trans('general.more-about-me') }}
-            <icon-back class="icon-md icon-dark icon-rotate"></icon-back>
+            <icon icon-name="back" Class="icon-md icon-dark icon-rotate"></icon>
         </a>
 
     </div>

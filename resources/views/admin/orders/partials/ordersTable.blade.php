@@ -2,8 +2,7 @@
     <div class="card-body">
         <div class="card-title d-flex justify-content-between align-items-center">
             <div class="fw-bold text-dark">Orders</div>
-            <icon-add  class="icon-md icon-dark"></icon-add>
-           
+            <icon icon-name="add" class="icon-md icon-dark"></icon>
         </div>
         <div>
             <table class="table">

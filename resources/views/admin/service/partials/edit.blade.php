@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <a type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editServiceModal-{{ $serviceItem->id }}">
-  <icon-edit class="icon icon-dark"></icon-edit>
+  <icon icon-name="edit" class="icon icon-dark"></icon>
 </a>
 
 <!-- Modal -->
@@ -33,7 +33,7 @@
             </button>
             <button type="submit" class="btn btn-dark rounded-pill px-4 fw-bold border-2 me-0 shadow-none">
               Save
-              <icon-back Class="icon-md icon-inverted icon-rotate ms-2"></icon-back>
+              <icon icon-name="back" Class="icon-md icon-inverted icon-rotate ms-2"></icon>
             </button>
           </div>
         </form>
