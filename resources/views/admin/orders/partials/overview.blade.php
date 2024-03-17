@@ -3,17 +3,17 @@ $cards= collect([
 [
 'title' => "Total Orders",
 'price' => '122',
-'icon' => '<icon-shop class="icon icon-inverted"></icon-shop>'
+'icon' => '<icon icon-name="shop" class="icon icon-inverted"></icon>'
 ],
 [
 'title' => "Total sale",
 'price' => '122',
-'icon' => '<icon-invoices class="icon icon-inverted"></icon-invoices>'
+'icon' => '<icon icon-name="invoices" class="icon icon-inverted"></icon>'
 ],
 [
 'title' => "Refunded",
 'price' => '122',
-'icon' => '<icon-rotate class="icon icon-inverted"></icon-rotate>'
+'icon' => '<icon icon-name="rotate" class="icon icon-inverted"></icon>'
 ],
 
 ]);

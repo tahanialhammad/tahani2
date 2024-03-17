@@ -1,10 +1,6 @@
 <!-- Button trigger modal -->
 <a type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addServiceModal">
-
-  <svg id="icon-add-large" class="icon-xxl icon-dark" viewBox="0 0 40 40">
-    <path d="M26.5 18.7h-5.8V13c0-.4-.3-.8-.8-.8s-.8.3-.8.8v5.8h-5.8c-.4 0-.8.3-.8.8s.3.8.8.8h5.8V26c0 .4.3.8.8.8s.8-.3.8-.8v-5.8h5.8c.4 0 .8-.3.8-.8s-.4-.7-.8-.7z" />
-    <path d="M20 0C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0zm0 38c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18z" />
-  </svg>
+  <icon icon-name="addLarg" class="icon-xxl icon-dark"></icon>
 </a>
 
 
@@ -38,7 +34,7 @@
             </button>
             <button type="submit" class="btn btn-dark rounded-pill px-4 fw-bold border-2 me-0 shadow-none">
               Save
-              <icon-back Class="icon-md icon-inverted icon-rotate ms-2"></icon-back>
+              <icon icon-name="back" Class="icon-md icon-inverted icon-rotate ms-2"></icon>
             </button>
           </div>
         </form>

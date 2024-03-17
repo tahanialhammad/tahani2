@@ -3,32 +3,32 @@ $navLinks= collect([
 [
 'name' => trans('menu.dashboard'),
 'route' => 'dashboard',
-'icon' => '<icon-home class="icon icon-inverted"></icon-home>'
+'icon' => '<icon icon-name="home" class="icon icon-inverted"></icon>'
 ],
 [
 'name' => trans('menu.customers'),
 'route' => 'admin.accounts.index',
-'icon' => '<icon-user class="icon icon-inverted"></icon-user>'
+'icon' => '<icon icon-name="user" class="icon icon-inverted"></icon>'
 ],
 [
 'name' => trans('menu.invoices'),
 'route' =>   'admin.invoice.index',
-'icon' => '<icon-invoices class="icon icon-inverted"></icon-invoices>'
+'icon' => '<icon icon-name="invoices" class="icon icon-inverted"></icon>'
 ],
 [
 'name' => trans('menu.orders'),
 'route' =>  'admin.order.index',
-'icon' => '<icon-shop class="icon icon-inverted"></icon-shop>'
+'icon' => '<icon icon-name="shop" class="icon icon-inverted"></icon>'
 ],
 [
 'name' => trans('menu.services'),
 'route' => 'admin.service.index',
-'icon' => '<icon-service class="icon icon-inverted"></icon-service>'
+'icon' => '<icon icon-name="service" class="icon icon-inverted"></icon>'
 ],
 [
 'name' => trans('menu.helpcenter'),
 'route' => 'admin.faq.index',
-'icon' => '<icon-info class="icon icon-inverted"></icon-info>'
+'icon' => '<icon icon-name="info" class="icon icon-inverted"></icon>'
 ],
 ]);
 
