@@ -8,7 +8,7 @@
                 <div class="fw-bold text-dark">Invoices</div>
                 <icon icon-name="arrowBold" class="icon-md icon-dark icon-rotate"></icon>
             </div>
-            <div>
+            <div class="table-responsive">
                 <table class="table">
                     <thead>
                         <tr>

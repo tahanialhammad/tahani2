@@ -32,6 +32,7 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
 
     // Orders
     Route::get('/orders', [OrderController::class, 'index'])->name('admin.order.index');
+    Route::get('/orders/{order}', [OrderController::class, 'show'])->name('admin.order.show');
     Route::post('orderes/add', [OrderController::class, 'addOrEditOrder'])->name('admin.order.addOrEditOrder');
 
     // FAQ

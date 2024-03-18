@@ -1,5 +1,5 @@
 <template>
-    <div>
+<div class="table-responsive">
         <!-- {{ allAccounts }} -->
         <table class="table">
             <thead>
