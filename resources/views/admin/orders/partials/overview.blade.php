@@ -6,7 +6,12 @@ $cards= collect([
 'icon' => '<icon icon-name="shop" class="icon icon-inverted"></icon>'
 ],
 [
-'title' => "Total sale",
+'title' => "Complated orders",
+'price' => '122',
+'icon' => '<icon icon-name="invoices" class="icon icon-inverted"></icon>'
+],
+[
+'title' => "Not Complated orders",
 'price' => '122',
 'icon' => '<icon icon-name="invoices" class="icon icon-inverted"></icon>'
 ],

@@ -4,7 +4,7 @@
             <div class="fw-bold text-dark">Orders</div>
             <icon icon-name="add" class="icon-md icon-dark"></icon>
         </div>
-        <div>
+        <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
@@ -13,7 +13,7 @@
                         <th scope="col">{{ trans("general.price")}}</th>
                         <th scope="col">{{ trans("services.service")}}</th>
                         <th scope="col">{{ trans("general.status")}}</th>
-                        <th scope="col text-center">{{ trans("general.action")}}</th>
+                        <th scope="col" class="text-center bg-info">{{ trans("general.action")}}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,10 +24,13 @@
                         <td>{{ $order->price }} €</td>
                         <td>{{ $order->service->title }} </td>
                         <td>{{ $order->status }} </td>
-                        <td class="d-flex">
-                        @include('admin.orders.partials.edit')
-                        @include('admin.orders.partials.delete')
-                        @include('admin.orders.partials.download') 
+                        <td class="d-flex justify-content-center">
+                            <a href="{{ route('admin.order.show', ['order' => $order->id]) }}"  class="btn btn-link">
+                                <icon icon-name="show" class="icon-md icon-dark"></icon>
+                            </a>
+                            @include('admin.orders.partials.edit')
+                            @include('admin.orders.partials.delete')
+                            @include('admin.orders.partials.download')
                         </td>
                     </tr>
                     @empty

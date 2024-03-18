@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <a type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editorderModal-{{ $order->id }}">
-  <icon icon-name="edit" class="icon icon-dark"></icon>
+  <icon icon-name="edit" class="icon-md icon-dark"></icon>
 </a>
 
 <!-- Modal -->
