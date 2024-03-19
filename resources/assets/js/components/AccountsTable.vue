@@ -17,8 +17,8 @@
                     <td> {{ account.email }}</td>
                     <td> {{ account.is_admin ? "Admin" : "User" }}</td>
                     <td class="d-flex">
-                        <icon-edit class="icon icon-dark"></icon-edit>
-                        <icon-delete class="icon icon-dark"></icon-delete>
+                        <icon icon-name="edit" class="icon icon-dark me-2"></icon>
+                        <icon icon-name="delete"  class="icon icon-dark"></icon>
                     </td>
                 </tr>
 
@@ -28,12 +28,14 @@
 </template>
 
 <script>
+import Icon from './icons/Icon.vue'
 export default {
     data() {
         return {
             allAccounts: []
         }
     },
+    components: {Icon},
     created() {
         this.fetchAccounts();
     },

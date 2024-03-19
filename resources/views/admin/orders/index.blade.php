@@ -1,7 +1,7 @@
 @extends('admin.admin-template')
 @section('content')
 <div>
-    <div class="col-xl-9 page-title mb-4">
+    <div class="col-xl-9 mb-4">
         <h3 class="fw-bold m-0">
             Orders
         </h3>
