@@ -1,5 +1,24 @@
 @extends('admin.admin-template')
 @section('content')
+
+@php
+$progress = 0;
+
+
+switch($order->status){
+        case 2 :
+        $progress = 25;
+        break;
+        case 3 :
+        $progress = 50;
+        break;
+        default :
+        $progress = 0;
+        break;
+}
+
+@endphp
+
 <div>
     <div class="col-xl-9 mb-4">
         <h3 class="fw-bold m-0">
@@ -10,7 +29,6 @@
 
     <div class="row g-0">
         <div class="col-xl-9 mt-4 p-4 bg-white rounded">
-
             <div class="d-flex justify-content-between align-items-start mb-4">
                 <div>
                     <h3 class="fw-bold">
@@ -24,18 +42,29 @@
                     <h3 class="fw-bold">
                         Complate
                         <div>
-                            46 %
+                            {{ $progress}} %
+
+                            <!-- @switch($order->status)
+                                @case(2)
+                               25
+                                @break
+                                @case(3)
+                                50
+                                @default
+                              0
+                                @break
+                            @endswitch -->
                         </div>
                     </h3>
 
                     <div class="progress" style="height: 5px;">
-                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 45%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 15%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
 
                 </div>
                 <div>
                     <h3 class="fw-bold m-0">
-                        Expected <br/> completion
+                        Expected <br /> completion
                     </h3>
                     <div>
                         20 Augs 2024
@@ -45,9 +74,6 @@
                     </div>
                 </div>
             </div>
-
-
-
 
             <!-- <div class="w-75 mx-auto mb-4 position-relative">
                 <div class="progress" style="height: 5px;">

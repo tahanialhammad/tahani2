@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('service_id');
-            $table->tinyInteger('status');
+            $table->integer('status');
             $table->decimal('price', 10, 2);
             $table->softDeletes();
             $table->timestamps();

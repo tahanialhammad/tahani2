@@ -1,8 +1,9 @@
 @php
+$totalOrders = count($orders);
 $cards= collect([
 [
 'title' => "Total Orders",
-'price' => '122',
+'price' => $totalOrders,
 'icon' => '<icon icon-name="shop" class="icon icon-inverted"></icon>'
 ],
 [
@@ -30,7 +31,7 @@ $cards= collect([
     @foreach ($cards as $card)
     <div class="card p-4 bg-info bg-gradient border border-end border-light text-white" onmouseover="this.classList.add('bg-dark')" onmouseout="this.classList.remove('bg-dark')">
         <div class="card-body ">
-            <div class="card-title d-flex align-items-center">
+            <div class="card-title d-flex align-items-start">
                 <div class="d-flex justify-content-center bg-dark p-2 w-30 h-30 rounded-circle ">
                     {!! $card['icon'] !!}
                 </div>
