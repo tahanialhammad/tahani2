@@ -44,6 +44,12 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
 // Auth users and admin
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Orders
+    Route::get('/myorders', [OrderController::class, 'myorders'])->name('user.order.myorders');
+
+     // Service
+     Route::get('/services-store', [ServiceController::class, 'servicesStore'])->name('user.services.index');
 });
 
 

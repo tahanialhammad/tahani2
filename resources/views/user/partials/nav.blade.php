@@ -7,7 +7,12 @@ $navLinks= collect([
 ],
 [
 'name' => 'My order',
-'route' => 'admin.service.index',
+'route' => 'user.order.myorders',
+'icon' => '<ion-icon name="qr-code-outline"></ion-icon>'
+],
+[
+'name' => 'Services Store',
+'route' => 'user.services.index',
 'icon' => '<ion-icon name="qr-code-outline"></ion-icon>'
 ],
 [

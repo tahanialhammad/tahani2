@@ -6,6 +6,7 @@ use App\Models\Invoice;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -18,7 +19,6 @@ class OrderController extends Controller
     public function show(Order $order)
     {
         return view('admin.orders.show', ['order' => $order]);
-
     }
 
     public function addOrEditOrder(Request $request)
@@ -26,4 +26,10 @@ class OrderController extends Controller
         //
     }
 
+    public function myorders()
+    {
+        $user = Auth::user();
+        $orders = $user->orders;
+        return view('user.orders.index', compact('orders'));
+    }
 }
