@@ -29,7 +29,7 @@
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="btn btn-link">
-                  <icon icon-name="delete" class="icon icon-dark"></icon>
+                    <icon icon-name="delete" class="icon icon-dark"></icon>
                 </form>
               </div>
             </div>
@@ -37,21 +37,28 @@
             <p class="text-muted fw-bold fs-sm">{{ $created->format('d M Y') }}</p>
             <div class="card-text m-0">
               {{ $serviceItem->body }}
-              <div>{{ trans ('packages.package-list')}}</div>
+
+              @if(count($serviceItem->packages ))
+              <div class="d-flex">{{ trans ('packages.package-list')}} :
+
+                @foreach ( $serviceItem->packages as $package)
+                <img src="/images/packages/{{ $package->code }}.svg" class="w-30" alt="{{$package->code}}">
+                @endforeach
+              </div>
+              @endif
             </div>
           </div>
-        </div>
-        @empty
+          @empty
 
-        <div class="card mb-3 p-4">
-          <div class="card-body p-0 text-center">
-            <h5> {{ trans('services.no-services') }} </h5>
-            <icon-empty></icon-empty>
+          <div class="card mb-3 p-4">
+            <div class="card-body p-0 text-center">
+              <h5> {{ trans('services.no-services') }} </h5>
+              <icon-empty></icon-empty>
+            </div>
           </div>
+          @endforelse
         </div>
-        @endforelse
       </div>
     </div>
   </div>
-</div>
-@stop
+  @stop

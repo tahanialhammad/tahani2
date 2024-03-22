@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use App\Models\Packages;
+use App\Models\Package;
 use App\Models\Faq;
 use App\Models\FaqSection;
 
@@ -16,7 +16,7 @@ class SiteController extends Controller
 {
     public function index()
     {
-        $packages = Packages::all();
+        $packages = Package::all();
 
         return view('site.home.welcome', compact('packages'));
     }
