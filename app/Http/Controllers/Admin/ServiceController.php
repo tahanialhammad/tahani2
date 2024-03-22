@@ -17,16 +17,10 @@ use App\Models\Service;
 
 class ServiceController extends Controller
 {
-
     public function index()
     {
         $services = Service::all();
-        $servicefirst = Service::first();
-      //  $services = Service::with('packages')->get();
-//dd( $servicefirst->packages);
         $packages = Package::all();
-       
-
         return view('admin.service.index', compact('services', 'packages'));
     }
 
