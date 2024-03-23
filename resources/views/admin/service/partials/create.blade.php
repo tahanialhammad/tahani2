@@ -30,12 +30,12 @@
             <div class="invalid-feedback">{{ $errors->first('body') }}</div>
 
             <div class="mb-3">
-                <!-- <select class="form-select" aria-label="Select Packages" name="packageIds[]" multiple> -->
-                <select class="form-select" aria-label="Select Packages" name="packageId" >
-                    @foreach ($packages as $package)
-                        <option value="{{ $package->id }}">{{ $package->code }}</option>
-                    @endforeach
-                </select>
+              <!-- <select class="form-select" aria-label="Select Packages" name="packageId" > -->
+              <select class="form-select" aria-label="Select Packages" name="packageIds[]" multiple>
+                @foreach ($packages as $package)
+                <option value="{{ $package->id }}">{{ $package->code }}</option>
+                @endforeach
+              </select>
             </div>
           </div>
           <div class="modal-footer border-0 pt-2">

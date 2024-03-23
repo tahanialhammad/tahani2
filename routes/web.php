@@ -47,6 +47,8 @@ Route::middleware('auth')->group(function () {
 
     // Orders
     Route::get('/myorders', [OrderController::class, 'myorders'])->name('user.order.myorders');
+    Route::get('/new-order/{service}', [OrderController::class, 'newOrder'])->name('user.order.newOrder');
+    Route::post('/new-order/{service}/add', [OrderController::class, 'addNewOrder'])->name('user.order.addNewOrder');
 
      // Service
      Route::get('/services-store', [ServiceController::class, 'servicesStore'])->name('user.services.index');
