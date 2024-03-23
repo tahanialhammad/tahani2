@@ -10,16 +10,14 @@
     </div>
 
     <div class="row p-0 g-0">
-
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @forelse ($services as $serviceItem)
             @php
-            /** @var \Carbon\Carbon $created */
-            $created = $serviceItem->created_at;
+            /** @var \Carbon\Carbon $updated */
+            $updated = $serviceItem->updated_at;
             @endphp
             <div class="col">
                 <div class="card h-100 p-4">
-                    <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title fw-bold text-center"> {{ $serviceItem->title }}</h5>
                         <p class="card-text"> {{ $serviceItem->body }}</p>
@@ -34,7 +32,12 @@
 
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Last boeked 3 mins ago</small>
+                        <small class="text-muted">Last update {{$updated}}</small>
+                        <div class="text-center">
+                            <a href="{{ route('user.order.newOrder' , ['service' => $serviceItem->id ] ) }}" class="btn btn-outline-dark rounded-pill px-5 border-2 fw-bold mx-auto shadow-none">
+                                Add service
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

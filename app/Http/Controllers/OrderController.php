@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Invoice;
 use App\Models\Order;
+use App\Models\Service;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,5 +32,16 @@ class OrderController extends Controller
         $user = Auth::user();
         $orders = $user->orders;
         return view('user.orders.index', compact('orders'));
+    }
+
+    public function newOrder(Service $service)
+    {
+        return view('user.orders.newOrder.index', compact('service'));
+
+    }
+
+    public function addNewOrder(Request $request, Service $service)
+    {
+        dd($request->all(), $service);
     }
 }
