@@ -42,6 +42,14 @@ class OrderController extends Controller
 
     public function addNewOrder(Request $request, Service $service)
     {
-        dd($request->all(), $service);
+        $user = Auth::user();
+        $order = Order::create([
+            'user_id' => $user->id,
+            'service_id' => $service->id,
+            'status' => 0,
+            'price' =>  $service->price,
+        ]);
+        return redirect(route('user.order.myorders'));
+
     }
 }

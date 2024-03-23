@@ -5,7 +5,7 @@
 <div>
     <h1>user my orders</h1>
     @forelse($orders as $order)
-    <div class="p-3 bg-info d-flex ">
+    <div class="p-3 bg-white border border-info d-flex mb-2 rounded ">
         <div>{{$order->id}}</div>
     </div>
     @empty
