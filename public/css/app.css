@@ -12529,6 +12529,14 @@ aside.collapsed {
   scale: 1.03;
 }
 
+.hover-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.hover-shadow-sm:hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
 .transition-03 {
   transition: 0.3s;
 }
