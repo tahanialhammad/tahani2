@@ -10,13 +10,13 @@
     <div class="col p-4 h-100">
         <h3> {{$service->title}}</h3>
         <form method="POST" role="form" action="{{ route('user.order.addNewOrder', ['service' => $service->id ]  ) }}">
-            <input type="text" name="serviceId" value="{{$service->id}}">
+            <x-input type="text" name="serviceId" value="{{$service->id}}" />
 
             @csrf
-            <button type="submit" class="btn btn-dark rounded-pill px-4 fw-bold border-2 me-0 shadow-none">
+            <x-button type="submit">
                 Save
-                <icon icon-name="back" Class="icon-md icon-inverted icon-rotate ms-2"></icon>
-            </button>
+            <icon icon-name="back" Class="icon-md icon-inverted icon-rotate ms-2"></icon>
+            </x-button>
         </form>
     </div>
 

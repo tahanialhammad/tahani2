@@ -32,7 +32,7 @@ $navLinks= collect([
     </li>
     @foreach ($navLinks as $navLink)
     <li class="{{ request()->routeIs($navLink['route']) ? 'hoverred' : ''}} mb-1">
-        <a href="{{ route($navLink['route']) }}">
+    <a href="{{ route($navLink['route']) }}">
             <span class="user-icon">
                 {!! $navLink['icon'] !!}
             </span>
