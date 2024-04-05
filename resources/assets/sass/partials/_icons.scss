@@ -50,6 +50,9 @@ svg {
   fill: $color-darkgrey;
 }
 
+.icon-danger {
+  fill: $danger;
+}
 .icon-rotate {
   transform: rotate(180deg);
 }
