@@ -22,9 +22,19 @@ class OrderController extends Controller
         return view('admin.orders.show', ['order' => $order]);
     }
 
-    public function addOrEditOrder(Request $request)
+    public function editOrDeleteOrder(Request $request, Order $order)
     {
-        //
+        if ($request->has('delete')) {
+            $order->delete();
+            return back()->with('success', 'Order deleted successfully.');
+        } else {
+            $order->update([
+                'price' => $request->input('price'),
+                'status' => $request->input('status'),
+                'work_hours' => $request->input('work_hours'),
+            ]);
+        }
+        return back()->with('success', 'Order updated successfully.');
     }
 
     public function myorders()
@@ -37,7 +47,6 @@ class OrderController extends Controller
     public function newOrder(Service $service)
     {
         return view('user.orders.newOrder.index', compact('service'));
-
     }
 
     public function addNewOrder(Request $request, Service $service)
@@ -50,6 +59,5 @@ class OrderController extends Controller
             'price' =>  $service->price,
         ]);
         return redirect(route('user.order.myorders'));
-
     }
 }

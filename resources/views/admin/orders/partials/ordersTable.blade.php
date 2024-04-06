@@ -13,6 +13,7 @@
                         <th scope="col">{{ trans("general.price")}}</th>
                         <th scope="col">{{ trans("services.service")}}</th>
                         <th scope="col">{{ trans("general.status")}}</th>
+                        <th scope="col">work_hours</th>
                         <th scope="col" class="text-center bg-info text-white">{{ trans("general.action")}}</th>
                     </tr>
                 </thead>
@@ -25,6 +26,7 @@
                         <td>{{ $order->service->title }} </td>
                         <!-- \App\Enum\OrderStatus::PENDING() -->
                         <td>{{ $order->status }} </td>
+                        <td>{{ $order->work_hours }} </td>
                         <td class="d-flex justify-content-center">
                             <a href="{{ route('admin.order.show', ['order' => $order->id]) }}"  class="btn btn-link">
                                 <icon icon-name="show" class="icon-md icon-dark"></icon>

@@ -1,9 +1,13 @@
-<h5 class="fw-bold">Available packages </h5>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h5 class="fw-bold">Available packages </h5>
+    @include('admin.service.partials.addPackage')
+</div>
+
 
 @foreach ( $packages as $package)
 
 <a class="btn btn-link" data-bs-toggle="modal" href="#showPackageModal-{{$package->id}}" role="button">
-    <img src="/images/packages/{{ $package->code }}.svg" class="w-30" alt="{{$package->code}}">
+    <img src="/images/packages/{{ strtolower($package->code) }}.svg" class="w-30" alt="{{$package->code}}">
 </a>
 
 <!-- Show Modal -->

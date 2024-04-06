@@ -17,7 +17,7 @@ Route::controller(SiteController::class)->group(function () {
 });
 
 // Auth only admin
-Route::middleware(['auth', 'is_admin'])->group(function () {   
+Route::middleware(['auth', 'is_admin'])->group(function () {
     // accounts
     Route::get('/accounts', [AdminController::class, 'accounts'])->name('admin.accounts.index');
 
@@ -27,6 +27,7 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::delete('service/{service}', [ServiceController::class, 'deleteService'])->name('admin.service.deleteService');
 
     // Packages
+    Route::post('package/add', [ServiceController::class, 'addPackage'])->name('admin.addPackage');
     Route::post('/package/{package}', [ServiceController::class, 'editOrDeletePackage'])->name('admin.editOrDeletePackage');
     Route::delete('package/{package}', [ServiceController::class, 'editOrDeletePackage'])->name('admin.deletePackage');
 
@@ -37,6 +38,8 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     // Orders
     Route::get('/orders', [OrderController::class, 'index'])->name('admin.order.index');
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('admin.order.show');
+    Route::post('/orders/{order}', [OrderController::class, 'editOrDeleteOrder'])->name('admin.order.editOrDeleteOrder');
+    Route::delete('/orders/{order}', [OrderController::class, 'editOrDeleteOrder'])->name('admin.order.deleteOrder');
     Route::post('orderes/add', [OrderController::class, 'addOrEditOrder'])->name('admin.order.addOrEditOrder');
 
     // FAQ
@@ -54,9 +57,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/new-order/{service}', [OrderController::class, 'newOrder'])->name('user.order.newOrder');
     Route::post('/new-order/{service}/add', [OrderController::class, 'addNewOrder'])->name('user.order.addNewOrder');
 
-     // Service
-     Route::get('/services-store', [ServiceController::class, 'servicesStore'])->name('user.services.index');
-
+    // Service
+    Route::get('/services-store', [ServiceController::class, 'servicesStore'])->name('user.services.index');
 });
 
 
@@ -66,5 +68,5 @@ Route::middleware('auth')->group(function () {
 
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 //lateste update before delete from laptop and npm run production uuuuuuuuuuuuuu

@@ -25,9 +25,17 @@
 
           <div class="mb-3">
             <textarea class="form-control rounded-3 shadow-none @error('body') is-invalid @enderror" name="body" value="{{ $serviceItem->body }}"></textarea>
-
             <div class="invalid-feedback">{{ $errors->first('body') }}</div>
           </div>
+
+          <div class="mb-3">
+              <select class="form-select" aria-label="Select Packages" name="packageIds[]" multiple>
+                @foreach ($packages as $package)
+                <option value="{{ $package->id }}">{{ $package->code }}</option>
+                @endforeach
+              </select>
+            </div>
+
           <div class="modal-footer border-0 pt-2">
             <button type="button" class="btn btn-outline-dark rounded-pill px-4 fw-bold text-capitalize border-2 me-2 shadow-none" data-bs-dismiss="modal">cancel
             </button>
