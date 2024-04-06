@@ -67,4 +67,20 @@ class ServiceController extends Controller
         $services = Service::all();
         return view('user.services.index', compact('services'));
     }
+
+    public function editOrDeletePackage(Request $request, Package $package)
+    {
+        if ($request->has('delete')) {
+            $package->delete();
+            return back()->with('success', 'Package deleted successfully.');
+        } else {
+            // Update the package with the provided data
+            $package->update([
+                'code' => $request->input('code'),
+                'info' => $request->input('info')
+            ]);
+        }
+
+        return back()->with('success', 'Package updated successfully.');
+    }
 }

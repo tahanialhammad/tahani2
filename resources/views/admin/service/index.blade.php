@@ -50,6 +50,10 @@
       </div>
       @endforelse
     </div>
+
+    <div class="col-xl-5 p-4">
+      @include('admin.service.partials.packages')
+    </div>
   </div>
 </div>
 @stop
