@@ -46,10 +46,17 @@ class ServiceController extends Controller
                 $service->packages()->attach(request('packageIds'));
             }
         } else {
-            Service::find($id)->update([
-                'title' => $request->input('title'),
-                'body' => $request->input('body')
-            ]);
+            $service = Service::find($id);
+
+        // Update the service 
+        $service->update([
+            'title' => $request->input('title'),
+            'body' => $request->input('body')
+        ]);
+
+        if ($request->has('packageIds')) {
+            $service->packages()->sync($packageIds);
+        }
         }
         return back();
     }
@@ -66,6 +73,15 @@ class ServiceController extends Controller
     {
         $services = Service::all();
         return view('user.services.index', compact('services'));
+    }
+
+    public function addPackage(Request $request)
+    {
+        Package::create([
+            'code' => $request->input('code'),
+            'info' => $request->input('info'),
+        ]);
+        return back()->with('success', 'Package added successfully.');
     }
 
     public function editOrDeletePackage(Request $request, Package $package)

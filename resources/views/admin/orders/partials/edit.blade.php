@@ -13,13 +13,13 @@
         <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-
       <div class="modal-body">
-        <form method="POST" role="form" action="">
+        <form method="POST" role="form" action="{{ route('admin.order.editOrDeleteOrder', ['order' =>$order->id] )}}">
           @csrf
-          <input  name="id" value="{{ $order->id }}">
-          <div class="mb-3">
-          
+          <div class="mb-3 d-flex flex-row gap-2">
+            <input type="number"class="form-control" name="price" value="{{ $order->price}}" min="0">
+            <input type="number"class="form-control" name="status" value="{{ $order->status}}" min="0" max="10">
+            <input type="time" class="form-control" name="work_hours" id="workhours" value="{{ $order->work_hours }}" pattern="[0-9]{2}:[0-9]{2}">
           </div>
 
           <div class="modal-footer border-0 pt-2">
@@ -27,7 +27,7 @@
             </button>
             <button type="submit" class="btn btn-dark rounded-pill px-4 fw-bold border-2 me-0 shadow-none">
               Save
-              <icon icon-name="back"Class="icon-md icon-inverted icon-rotate ms-2"></icon>
+              <icon icon-name="back" Class="icon-md icon-inverted icon-rotate ms-2"></icon>
             </button>
           </div>
         </form>
