@@ -10,7 +10,7 @@
 
       <div class="modal-header border-0 mb-4 align-items-start">
         <h3 class="modal-title fw-bold" id="editServiceModalLabel-{{ $serviceItem->id }}">Edit service</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
 

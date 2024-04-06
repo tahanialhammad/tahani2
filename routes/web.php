@@ -26,6 +26,10 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::post('service/add', [ServiceController::class, 'addOrEditService'])->name('admin.service.addOrEditService');
     Route::delete('service/{service}', [ServiceController::class, 'deleteService'])->name('admin.service.deleteService');
 
+    // Packages
+    Route::post('/package/{package}', [ServiceController::class, 'editOrDeletePackage'])->name('admin.editOrDeletePackage');
+    Route::delete('package/{package}', [ServiceController::class, 'editOrDeletePackage'])->name('admin.deletePackage');
+
     // Invoices
     Route::get('/invoices', [InvoiceController::class, 'index'])->name('admin.invoice.index');
     Route::post('invoices/add', [InvoiceController::class, 'addOrEditInvoice'])->name('admin.invoice.addOrEditInvoice');
@@ -52,6 +56,7 @@ Route::middleware('auth')->group(function () {
 
      // Service
      Route::get('/services-store', [ServiceController::class, 'servicesStore'])->name('user.services.index');
+
 });
 
 
