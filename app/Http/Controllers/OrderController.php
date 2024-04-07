@@ -26,7 +26,10 @@ class OrderController extends Controller
     {
         if ($request->has('delete')) {
             $order->delete();
-            return back()->with('success', 'Order deleted successfully.');
+            return back()->with('flash_message', [
+                'level' => 'success',
+                'message' =>  trans('messages.order_deleted')
+            ]);
         } else {
             $order->update([
                 'price' => $request->input('price'),
@@ -34,7 +37,21 @@ class OrderController extends Controller
                 'work_hours' => $request->input('work_hours'),
             ]);
         }
-        return back()->with('success', 'Order updated successfully.');
+
+        // return back()->with('success', 'Order updated successfully.'); //simple flash  
+
+        //   \Session::flash('flash_message', trans('messages.order_updated')); 
+        //+ use Illuminate\Support\Facades\Session;
+        // in larave >= 8  use  session()->
+
+        //   session()->flash('flash_message', trans('messages.order_updated'));
+
+        session()->flash('flash_message', [
+            'level' => 'success',
+            'message' =>  trans('messages.order_updated')
+        ]);
+
+        return back();
     }
 
     public function myorders()

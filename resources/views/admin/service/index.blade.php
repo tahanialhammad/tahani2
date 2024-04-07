@@ -5,12 +5,14 @@
     <h3 class="fw-bold m-0">
       {{ trans('services.all-services') }}
     </h3>
-
     @include('admin.service.partials.create')
   </div>
 
   <div class="row p-0 g-0">
     <div class="col-xl-7">
+
+<sweet-alert></sweet-alert>
+
       @forelse ($services as $serviceItem)
       @php
       /** @var \Carbon\Carbon $created */
