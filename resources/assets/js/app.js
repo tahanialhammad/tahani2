@@ -19,7 +19,7 @@ import GlideSlider from './components/GlideSlider.vue'
 import OrdersPerMonthChart from './components/graphs/OrdersPerMonthChart.vue'
 import OrdersPerService from './components/graphs/OrdersPerService.vue'
 import AccountsTable from "./components/AccountsTable.vue"
-
+import SweetAlert from './components/sweetalert/SweetAlert.vue'
 
 //Icons
 import IconInfo from './components/icons/IconInfo.vue'
@@ -40,6 +40,7 @@ createApp({
         OrdersPerMonthChart,
         OrdersPerService,
         AccountsTable,
+        SweetAlert,
         IconInfo,
         IconSearch,
         IconUser,

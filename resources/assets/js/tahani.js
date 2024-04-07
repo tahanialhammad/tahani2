@@ -67,3 +67,6 @@ $(document).on('click', '.user-toggle', function () {
     userNavigation.toggleClass('active-menu');
 
 });
+
+
+// Swal.fire("SweetAlert2 is working!");

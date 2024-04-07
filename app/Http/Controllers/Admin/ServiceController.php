@@ -81,14 +81,16 @@ class ServiceController extends Controller
             'code' => $request->input('code'),
             'info' => $request->input('info'),
         ]);
-        return back()->with('success', 'Package added successfully.');
+      //  return back()->with('success', 'Package added successfully.');
+        return back()->with('flash_message', ['message' =>  trans('messages.package_added')]);
+
     }
 
     public function editOrDeletePackage(Request $request, Package $package)
     {
         if ($request->has('delete')) {
             $package->delete();
-            return back()->with('success', 'Package deleted successfully.');
+           return back()->with('flash_message', ['message' =>  trans('messages.package_deleted')]);
         } else {
             // Update the package with the provided data
             $package->update([
@@ -97,6 +99,8 @@ class ServiceController extends Controller
             ]);
         }
 
-        return back()->with('success', 'Package updated successfully.');
+        // return back()->with('success', 'Package updated successfully.');
+        return back()->with('flash_message', ['message' =>  trans('messages.package_updated')]);
+
     }
 }
