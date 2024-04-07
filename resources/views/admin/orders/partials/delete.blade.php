@@ -7,8 +7,6 @@
 </form> -->
 
 
-<a href="{{ route('admin.order.deleteOrder', $order->id) }}" data-method="delete" id="delete-user" title="{{ trans('xcorev2.delete') }}" data-bs-custom-class="tooltip-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-confirm="{{ trans('xcore.are_you_sure') }}" data-message='vvvvvvvvvvvvvvvvvv' data-confirmbuttontext="{{ trans('xcorev2.yes_remove') }}" data-cancelbuttontext="{{ trans('xcorev2.cancel') }}">
-    <svg id="icon-close" class="icon icon-light" viewBox="0 0 13.5 13.5">
-        <path d="M13.3.2c-.3-.3-.8-.3-1.1 0L6.8 5.7 1.3.2C1-.1.5-.1.2.2s-.3.8 0 1.1l5.5 5.5-5.5 5.5c-.3.3-.3.8 0 1.1.1.1.3.2.5.2s.4-.1.5-.2l5.5-5.5 5.5 5.5c.1.1.3.2.5.2s.4-.1.5-.2c.3-.3.3-.8 0-1.1L7.8 6.8l5.5-5.5c.3-.3.3-.8 0-1.1z" />
-    </svg>
+<a href="{{ route('admin.order.deleteOrder', $order->id) }}" data-method="delete" id="delete-user" title="delete" data-bs-custom-class="tooltip-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-confirm="are you sure" data-message='delete order' data-confirmbuttontext=" yes " data-cancelbuttontext="Cancel">
+    <icon icon-name="delete" class="icon icon-light"></icon>
 </a>
