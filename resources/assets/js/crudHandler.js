@@ -1,6 +1,3 @@
-// Method to make delete post requests possible in browser
-import swal from 'sweetalert2';
-
 let crudHandler = {
     initialize: function () {
         this.registerEvents();
@@ -92,29 +89,26 @@ let crudHandler = {
     },
 
     createForm: function (link) {
-        let form =
-            $('<form>', {
-                'method': 'POST',
-                'action': link.attr('href')
-            });
-
-        let token =
-            $('<input>', {
-                'name': '_token',
-                'type': 'hidden',
-                'value': Laravel.csrfToken
-            });
-
-        let hiddenInput =
-            $('<input>', {
-                'name': '_method',
-                'type': 'hidden',
-                'value': link.data('method')
-            });
-
-        return form.append(token, hiddenInput)
-            .appendTo('body');
+        let form = $('<form>', {
+            'method': 'POST',
+            'action': link.attr('href')
+        });
+    
+        let token = $('<input>', {
+            'name': '_token',
+            'type': 'hidden',
+            'value': $('meta[name="csrf-token"]').attr('content') // Fetch CSRF token value from the meta tag
+        });
+    
+        let hiddenInput = $('<input>', {
+            'name': '_method',
+            'type': 'hidden',
+            'value': link.data('method')
+        });
+    
+        return form.append(token, hiddenInput).appendTo('body');
     }
+    
 };
 
 // Trigger the laravel method
