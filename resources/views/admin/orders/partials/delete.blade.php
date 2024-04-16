@@ -7,6 +7,20 @@
 </form> -->
 
 
-<a href="{{ route('admin.order.deleteOrder', $order->id) }}" data-method="delete" id="delete-user" title="delete" data-bs-custom-class="tooltip-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-confirm="are you sure" data-message='delete order' data-confirmbuttontext=" yes " data-cancelbuttontext="Cancel">
+<!-- <a href="{{ route('admin.order.deleteOrder', $order->id) }}" data-method="delete" id="delete-user" title="delete" data-bs-custom-class="tooltip-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-confirm="are you sure" data-message='delete order' data-confirmbuttontext=" yes " data-cancelbuttontext="Cancel">
     <icon icon-name="delete" class="icon icon-light"></icon>
-</a>
+</a> -->
+
+
+
+<form-crud-handler
+action="{{ route('admin.order.deleteOrder', $order->id) }}"
+    confirm="Are you sure you want to delete this order?"
+    confirmButtonText="Yes"
+    cancelButtonText="Cancel"
+    message="Delete order"
+>
+<button type="submit" class="btn btn-link">
+        <icon icon-name="delete" class="icon icon-light"></icon>
+      </button>
+    </form-crud-handler>

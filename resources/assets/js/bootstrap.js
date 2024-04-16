@@ -17,4 +17,4 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // Custom scripts
 require("./tahani.js");
-require("./crudHandler.js");
+// require("./crudHandler.js");
