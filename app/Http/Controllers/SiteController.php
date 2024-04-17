@@ -28,4 +28,10 @@ class SiteController extends Controller
         return view('site.helpcenter.index', compact('sections', 'allFaqs'));
     }
 
+    public function services()
+    {
+        $services=[];
+        return view('site.services.index', compact('services'));
+
+    }
 }

@@ -54,6 +54,16 @@ class OrderController extends Controller
         return back();
     }
 
+public function deleteOrder(Request $request, Order $order)
+{
+    $order->delete();
+    return back()->with('flash_message', [
+        'level' => 'success',
+        'message' =>  trans('messages.order_deleted')
+    ]);
+    return back();
+}
+
     public function myorders()
     {
         $user = Auth::user();

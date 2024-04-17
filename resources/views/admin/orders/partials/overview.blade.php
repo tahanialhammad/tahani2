@@ -8,17 +8,17 @@ $cards= collect([
 ],
 [
 'title' => "Complated orders",
-'price' => '122',
+'price' => '895 €',
 'icon' => '<icon icon-name="invoices" class="icon icon-inverted"></icon>'
 ],
 [
 'title' => "Not Complated orders",
-'price' => '122',
+'price' => '725 €',
 'icon' => '<icon icon-name="invoices" class="icon icon-inverted"></icon>'
 ],
 [
 'title' => "Refunded",
-'price' => '122',
+'price' => '122 €',
 'icon' => '<icon icon-name="rotate" class="icon icon-inverted"></icon>'
 ],
 
@@ -37,7 +37,7 @@ $cards= collect([
                 </div>
                 <h5 class="ms-2 fw-bold">{{ $card['title']}}</h5>
             </div>
-            <h2 class="card-text">{{ $card['price']}} €</h2>
+            <h2 class="card-text">{{ $card['price']}} </h2>
         </div>
         <div class="card-footer">
             <small class="d-flex justify-content-between align-items-center">

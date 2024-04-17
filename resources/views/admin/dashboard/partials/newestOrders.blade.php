@@ -9,7 +9,7 @@
     </div>
     <div class="mb-2">
         <a href="" class="link-dark fw-bold fs-sm">
-            Order No. 112
+            Order No. 003
         </a>
         <div class="progress" style="height: 5px;">
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
@@ -18,7 +18,7 @@
 
     <div class="mb-2">
         <a href="" class="link-dark fw-bold fs-sm">
-            Order No. 113
+            Order No. 002
         </a>
         <div class="progress" style="height: 5px;">
             <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>

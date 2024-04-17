@@ -12,7 +12,7 @@
             <h1 class="d-flex justify-content-between align-items-center fw-bold m-0">
             <icon icon-name="user" class="icon-xl icon-dark"></icon>
                 <span class="ms-4">
-                    10
+                    3
                 </span>
             </h1>
         </div>
@@ -55,7 +55,7 @@
                 </svg>
 
                 <span class="ms-4">
-                    13
+                    2
                 </span>
             </h1>
         </div>

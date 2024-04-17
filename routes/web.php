@@ -14,6 +14,7 @@ use App\Http\Controllers\OrderController;
 Route::controller(SiteController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
     Route::get('/helpcenter', 'helpcenter')->name('site.helpcenter.index');
+    Route::get('/services', 'services')->name('site.services.index');
 });
 
 // Auth only admin
@@ -39,7 +40,11 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::get('/orders', [OrderController::class, 'index'])->name('admin.order.index');
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('admin.order.show');
     Route::post('/orders/{order}', [OrderController::class, 'editOrDeleteOrder'])->name('admin.order.editOrDeleteOrder');
+    // Route::delete('/orders/{order}', [OrderController::class, 'editOrDeleteOrder'])->name('admin.order.deleteOrder');
     Route::delete('/orders/{order}', [OrderController::class, 'editOrDeleteOrder'])->name('admin.order.deleteOrder');
+    Route::delete('/orders/{order}', [OrderController::class, 'deleteOrder'])->name('admin.order.deleteOrder');
+
+   
     Route::post('orderes/add', [OrderController::class, 'addOrEditOrder'])->name('admin.order.addOrEditOrder');
 
     // FAQ

@@ -20,7 +20,7 @@ import OrdersPerMonthChart from './components/graphs/OrdersPerMonthChart.vue'
 import OrdersPerService from './components/graphs/OrdersPerService.vue'
 import AccountsTable from "./components/AccountsTable.vue"
 import SweetAlert from './components/sweetalert/SweetAlert.vue'
-
+import FormCrudHandler from "./components/FormCrudHandler.vue"
 //Icons
 import IconInfo from './components/icons/IconInfo.vue'
 import IconSearch from './components/icons/IconSearch.vue'
@@ -41,6 +41,7 @@ createApp({
         OrdersPerService,
         AccountsTable,
         SweetAlert,
+        FormCrudHandler,
         IconInfo,
         IconSearch,
         IconUser,

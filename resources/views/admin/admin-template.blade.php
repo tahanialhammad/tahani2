@@ -8,7 +8,7 @@
 <section class="page-content" id="body-pd">
     <div id="app">
         @include('admin.partials.topbar')
-        @include('snippets.flash')
+        @include('shared.flash')
 
         <div class="p-4">
             {{-- @yield('submenu') --}}

@@ -27,9 +27,9 @@
                         <!-- \App\Enum\OrderStatus::PENDING() -->
                         <td>{{ $order->status }} </td>
                         <td>{{ $order->work_hours }} </td>
-                        <td class="d-flex justify-content-center">
-                            <a href="{{ route('admin.order.show', ['order' => $order->id]) }}"  class="btn btn-link">
-                                <icon icon-name="show" class="icon-md icon-dark"></icon>
+                        <td class="d-flex flex-row gap-1 justify-content-center align-items-center">
+                            <a href="{{ route('admin.order.show', ['order' => $order->id]) }}" >
+                                <icon icon-name="show" class="icon icon-light"></icon>
                             </a>
                             @include('admin.orders.partials.edit')
                             @include('admin.orders.partials.delete')
