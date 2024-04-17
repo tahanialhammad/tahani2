@@ -8,6 +8,11 @@
             'name' => 'Helpcenter',
             'route' => 'site.helpcenter.index',
         ],
+        [
+            'name' => 'Services',
+            'route' => 'site.services.index',
+        ],
+        
     ]);
     $navClass = request()->routeIs('welcome') ? 'navbar-dark bg-dark' : 'navbar-light bg-white' ;
     $navBtnClass = request()->routeIs('welcome') ? 'light' : 'dark' ;
