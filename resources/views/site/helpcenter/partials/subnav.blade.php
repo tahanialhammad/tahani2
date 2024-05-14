@@ -1,12 +1,16 @@
 <div class="d-none d-md-block subnav">
     <ul class="nav flex-column fw-bold">
-        @forelse($sections->sortBy('sort_order') as $section)
-        <li class="nav-item">
-            <a class="nav-link pt-0" aria-current="page" href="{{ route('site.helpcenter.show', ['section' => $section->id]) }}">{{ $section->name }}</a>
-        </li>
+        @foreach($sections->sortBy('sort_order') as $section)
+            <li class="nav-item">
+            <!-- <a class="nav-link pt-0 {{ request()->is('helpcenter/'.$section->id.'*') ? 'active' : '' }}" aria-current="page" href="{{ route('site.helpcenter.show', ['section' => $section->id]) }}">{{ $section->name }}</a> -->
+
+            <a class="nav-link pt-0 {{ request()->routeIs('site.helpcenter.show') && request()->route('section')->id == $section->id ? 'active' : '' }}" aria-current="page" href="{{ route('site.helpcenter.show', ['section' => $section->id]) }}">{{ $section->name }}</a>
+
+            </li>
         @endforeach
     </ul>
 </div>
+
 
 
 {{-- Mobile version --}}
