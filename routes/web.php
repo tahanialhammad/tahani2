@@ -14,6 +14,7 @@ use App\Http\Controllers\OrderController;
 Route::controller(SiteController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
     Route::get('/helpcenter', 'helpcenter')->name('site.helpcenter.index');
+    Route::get('/helpcenter/{section}', 'helpcenterShow')->name('site.helpcenter.show');
     Route::get('/services', 'services')->name('site.services.index');
 });
 

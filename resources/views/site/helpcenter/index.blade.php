@@ -18,7 +18,7 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-lg-5 bg">
                 @forelse($sections->sortBy('sort_order') as $section)
                     <div class="col">
-                        <a href="">
+                    <a href="{{ route('site.helpcenter.show', ['section' => $section->id]) }}">
                             <div class="card h-100 text-center shadow">
                                 <div class="card-body py-5 ">
                                     <icon icon-name="home" class="icon-xxl icon-light mb-5"></icon>
