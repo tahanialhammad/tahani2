@@ -36,7 +36,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @foreach ($navLinks as $navLink)
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs($navLink['route']) ? 'active' : ''}}"
+                        <a class="nav-link {{ request()->routeIs($navLink['route']) ? 'active fw-bold border border-danger border-top-0 border-start-0 border-end-0 border-bottom-2 ' : ''}}"
                             aria-current="page"href="{{ route($navLink['route']) }}">{{ $navLink['name'] }}</a>
                     </li>
                 @endforeach
