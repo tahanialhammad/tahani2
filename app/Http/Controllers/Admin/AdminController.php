@@ -21,10 +21,21 @@ class AdminController extends Controller
         $accounts =  User::all();
         return view('admin.accounts.index',  compact('accounts'));
     }
+
+
+    public function editUser(Request $request)
+    {
+dd($request->all());
+
+    }
+
+
     // public function faq()
     // {
     //     $sections =  FaqSection::all();
     //     return view('admin.faq.index', compact('sections'));
     // }
+
+
 
 }

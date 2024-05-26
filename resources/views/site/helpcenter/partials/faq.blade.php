@@ -1,6 +1,4 @@
 <div class="ps-4">
-    <h3 class="fw-bold mb-4">{{ $section->name }}</h3>
-
     <div class="accordion bg-transparent" id="accordionFAQ-{{ $section->id }}">
 
         @foreach($section->faq->sortBy('sort_order') as $faq)
