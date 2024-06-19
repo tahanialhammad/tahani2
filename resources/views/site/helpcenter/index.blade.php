@@ -39,13 +39,6 @@
             @endphp
 
 
-            {{$iconName}}
-
-
-
-
-
-
             <div class="col">
                 <a href="{{ route('site.helpcenter.show', ['section' => $section->id]) }}">
                     <div class="card h-100 text-center shadow">

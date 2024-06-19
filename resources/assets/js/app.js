@@ -15,7 +15,7 @@ require('./bootstrap');
 import { createApp } from 'vue'
 import ExampleComponent from './components/ExampleComponent.vue'
 import RealTimeSearch from './components/RealTimeSearch.vue'
-import GlideSlider from './components/GlideSlider.vue'
+import GlideSlider from './components/slider/GlideSlider.vue'
 import OrdersPerMonthChart from './components/graphs/OrdersPerMonthChart.vue'
 import OrdersPerService from './components/graphs/OrdersPerService.vue'
 import AccountsTable from "./components/AccountsTable.vue"

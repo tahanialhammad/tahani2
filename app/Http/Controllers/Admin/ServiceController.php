@@ -32,11 +32,20 @@ class ServiceController extends Controller
         $packageIds = $request->input('packageIds');
         // $service->packages()->attach(request('packageIds'));
 
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'body' => 'required|string',
+            'price' => 'required|numeric|min:0',
+        ]);
+
         if (!$id) {
-            $service = Service::create([
-                'title' => $request->input('title'),
-                'body' => $request->input('body'),
-            ]);
+            // $service = Service::create([
+            //     'title' => $request->input('title'),
+            //     'body' => $request->input('body'),
+            // ]);
+
+            $service = Service::create($validatedData);
+
             // if ($packageId) {
             //  //   $service->packages()->attach($packageId);
             //     $service->packages()->attach($packageId, ['service_id' => $service->id]);
@@ -49,10 +58,11 @@ class ServiceController extends Controller
             $service = Service::find($id);
 
         // Update the service 
-        $service->update([
-            'title' => $request->input('title'),
-            'body' => $request->input('body')
-        ]);
+        // $service->update([
+        //     'title' => $request->input('title'),
+        //     'body' => $request->input('body')
+        // ]);
+        $service->update($validatedData);
 
         if ($request->has('packageIds')) {
             $service->packages()->sync($packageIds);
