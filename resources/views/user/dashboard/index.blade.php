@@ -5,6 +5,7 @@
 {{-- @include('snippets.flash') --}}
 <div id="user-dashboard">
     <div class="col my-4">
+    @include('user.dashboard.partials.latestProject')
     @include('user.dashboard.partials.overview')
     </div>
 
