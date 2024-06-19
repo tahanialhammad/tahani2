@@ -24,6 +24,11 @@
           </div>
 
           <div class="mb-3">
+            <input type="number" class="form-control rounded-3 shadow-none @error('price') is-invalid @enderror" name="price" step="0.01" min="0" max="9999" value="{{ $serviceItem->price }}">
+            <div class="invalid-feedback">{{ $errors->first('price') }}</div>
+          </div>
+
+          <div class="mb-3">
             <textarea class="form-control rounded-3 shadow-none @error('body') is-invalid @enderror" name="body" value="{{ $serviceItem->body }}"></textarea>
             <div class="invalid-feedback">{{ $errors->first('body') }}</div>
           </div>

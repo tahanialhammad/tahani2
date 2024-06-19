@@ -58,10 +58,11 @@ class ServiceController extends Controller
             $service = Service::find($id);
 
         // Update the service 
-        $service->update([
-            'title' => $request->input('title'),
-            'body' => $request->input('body')
-        ]);
+        // $service->update([
+        //     'title' => $request->input('title'),
+        //     'body' => $request->input('body')
+        // ]);
+        $service->update($validatedData);
 
         if ($request->has('packageIds')) {
             $service->packages()->sync($packageIds);
