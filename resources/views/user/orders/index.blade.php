@@ -3,7 +3,7 @@
 @section('content')
 
 <div>
-    <h1>user my orders</h1>
+    <h1>My orders</h1>
     @forelse($orders as $order)
     @php
     $progress = 0;
