@@ -11,6 +11,7 @@
                         <th scope="col">{{ trans("services.order-number")}}</th>
                         <th scope="col">{{ trans("general.customer")}}</th>
                         <th scope="col">{{ trans("general.price")}}</th>
+                        <th scope="col">payment_parts</th>                  
                         <th scope="col">{{ trans("services.service")}}</th>
                         <th scope="col">{{ trans("general.status")}}</th>
                         <th scope="col">work_hours</th>
@@ -23,6 +24,7 @@
                         <th scope="row">{{ $order->id }}</th>
                         <td>{{ $order->user_id }} - {{ $order->user->name }} </td>
                         <td>{{ $order->price }} €</td>
+                        <td>{{ $order->payment_parts }}</td>
                         <td>{{ $order->service->title }} </td>
                         <!-- \App\Enum\OrderStatus::PENDING() -->
                         <td>{{ $order->status }} </td>
@@ -34,6 +36,7 @@
                             @include('admin.orders.partials.edit')
                             @include('admin.orders.partials.delete')
                             @include('admin.orders.partials.download')
+                            <!-- @include('admin.orders.partials.addInvoiceToOrder') -->
                         </td>
                     </tr>
                     @empty

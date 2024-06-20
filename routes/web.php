@@ -45,7 +45,7 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     // Route::delete('/orders/{order}', [OrderController::class, 'editOrDeleteOrder'])->name('admin.order.deleteOrder');
     Route::delete('/orders/{order}', [OrderController::class, 'editOrDeleteOrder'])->name('admin.order.deleteOrder');
     Route::delete('/orders/{order}', [OrderController::class, 'deleteOrder'])->name('admin.order.deleteOrder');
-
+ //   Route::post('/orders/{order}', [OrderController::class, 'addInvoiceToOrder'])->name('admin.order.addInvoiceToOrder');
    
     Route::post('orderes/add', [OrderController::class, 'addOrEditOrder'])->name('admin.order.addOrEditOrder');
 

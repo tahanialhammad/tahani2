@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('invoices', function (Blueprint $table) {
-            $table->json('service_ids')->nullable();
-        });
+        //deleted
+        // Schema::table('invoices', function (Blueprint $table) {
+        //     $table->json('service_ids')->nullable();
+        // });
     }
 
     /**

@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 class InvoiceController extends Controller
 {
     public function index()
-    {
-        $invoices = Invoice::all();
+    {        
+      //    $invoices = Invoice::with('user')->get(); 
+          $invoices = Invoice::with(['user', 'order'])->get(); // Include the order relationship
+
         return view('admin.invoices.index', compact('invoices'));
     }
 

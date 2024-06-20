@@ -87,4 +87,11 @@ public function deleteOrder(Request $request, Order $order)
         ]);
         return redirect(route('user.order.myorders'));
     }
+
+    public function addInvoiceToOrder(Request $request, Order $order)
+{
+dd('hhh');
+}
+    
+
 }
