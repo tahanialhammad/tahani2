@@ -11,9 +11,11 @@
   <div class="row p-0 g-0">
     <div class="col-xl-7">
 
-<sweet-alert></sweet-alert>
+<!-- <sweet-alert></sweet-alert>
 
-<x-test message="message props" :active="true" >with slot </x-test>
+<x-test message="message props" :active="true" >with slot </x-test> -->
+
+
       @forelse ($services as $serviceItem)
       @php
       /** @var \Carbon\Carbon $created */

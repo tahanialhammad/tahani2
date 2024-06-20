@@ -6,30 +6,35 @@ $progress = 0;
 
 
 switch($order->status){
-        case 2 :
-        $progress = 25;
-        break;
-        case 3 :
-        $progress = 50;
-        break;
-        case 4 :
-        $progress = 75;
-        break;
-        case 5 :
-        $progress = 100;
-        break;
-        default :
-        $progress = 0;
-        break;
+case 2 :
+$progress = 25;
+break;
+case 3 :
+$progress = 50;
+break;
+case 4 :
+$progress = 75;
+break;
+case 5 :
+$progress = 100;
+break;
+default :
+$progress = 0;
+break;
 }
 
 @endphp
 
 <div>
     <div class="col-xl-9 mb-4">
-        <h3 class="fw-bold m-0">
-            My order
-        </h3>
+        <div class="d-flex align-items-center">
+            <icon icon-name="back" class="icon-lg icon-dark me-2 add-pointer" onclick="history.back();"></icon>
+
+            <h3 class="fw-bold m-0">
+                My order
+            </h3>
+        </div>
+
 
     </div>
 
@@ -64,7 +69,7 @@ switch($order->status){
                     </h3>
 
                     <div class="progress" style="height: 5px;">
-                        <div class="progress-bar progress-bar-striped bg-success w-{{ $progress}}" role="progressbar"  aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped bg-success w-{{ $progress}}" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
 
                 </div>
