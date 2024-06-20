@@ -6,6 +6,7 @@ use App\Models\Invoice;
 use App\Models\Order;
 use App\Models\Service;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,15 +55,15 @@ class OrderController extends Controller
         return back();
     }
 
-public function deleteOrder(Request $request, Order $order)
-{
-    $order->delete();
-    return back()->with('flash_message', [
-        'level' => 'success',
-        'message' =>  trans('messages.order_deleted')
-    ]);
-    return back();
-}
+    public function deleteOrder(Request $request, Order $order)
+    {
+        $order->delete();
+        return back()->with('flash_message', [
+            'level' => 'success',
+            'message' =>  trans('messages.order_deleted')
+        ]);
+        return back();
+    }
 
     public function myorders()
     {
@@ -89,9 +90,17 @@ public function deleteOrder(Request $request, Order $order)
     }
 
     public function addInvoiceToOrder(Request $request, Order $order)
-{
-dd('hhh');
-}
-    
+    {
+        $invoiceDate = Carbon::now()->addDays(14);
 
+        $order = Invoice::create([
+            'user_id' => $order->user_id,
+            'order_id' => $order->id,
+            'invoice_number' => "2024-" . $order->id .  $request->input('payment_parts'),
+            'invoice_date' => $invoiceDate,
+            'payment_parts' => $request->input('payment_parts'),
+            'amount' => $request->input('price'),
+        ]);
+        return back();
+    }
 }
