@@ -57,18 +57,21 @@ class ServiceController extends Controller
         } else {
             $service = Service::find($id);
 
-        // Update the service 
-        // $service->update([
-        //     'title' => $request->input('title'),
-        //     'body' => $request->input('body')
-        // ]);
-        $service->update($validatedData);
+            // Update the service 
+            // $service->update([
+            //     'title' => $request->input('title'),
+            //     'body' => $request->input('body')
+            // ]);
+            $service->update($validatedData);
 
-        if ($request->has('packageIds')) {
-            $service->packages()->sync($packageIds);
+            if ($request->has('packageIds')) {
+                $service->packages()->sync($packageIds);
+            }
         }
-        }
-        return back();
+        return back()->with('flash_message', [
+            'level' => 'success',
+            'message' => 'Service added successfully.'
+        ]);
     }
 
     public function deleteService(Service $service)
@@ -76,7 +79,10 @@ class ServiceController extends Controller
         //  Services::whereIn('id', $services->id)->delete();
         //   Services::find($services->id)->delete();
         $service->delete();
-        return back();
+        return back()->with('flash_message', [
+            'level' => 'success',
+            'message' => 'Service deleted successfully.'
+        ]);
     }
 
     public function servicesStore()
@@ -91,16 +97,15 @@ class ServiceController extends Controller
             'code' => $request->input('code'),
             'info' => $request->input('info'),
         ]);
-      //  return back()->with('success', 'Package added successfully.');
+        //  return back()->with('success', 'Package added successfully.');
         return back()->with('flash_message', ['message' =>  trans('messages.package_added')]);
-
     }
 
     public function editOrDeletePackage(Request $request, Package $package)
     {
         if ($request->has('delete')) {
             $package->delete();
-           return back()->with('flash_message', ['message' =>  trans('messages.package_deleted')]);
+            return back()->with('flash_message', ['message' =>  trans('messages.package_deleted')]);
         } else {
             // Update the package with the provided data
             $package->update([
@@ -111,6 +116,5 @@ class ServiceController extends Controller
 
         // return back()->with('success', 'Package updated successfully.');
         return back()->with('flash_message', ['message' =>  trans('messages.package_updated')]);
-
     }
 }
