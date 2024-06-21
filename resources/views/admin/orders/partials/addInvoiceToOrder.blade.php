@@ -1,7 +1,7 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#addInvoiceToOrderModal-{{ $order->id }}">
+<a type="button" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#addInvoiceToOrderModal-{{ $order->id }}">
 <icon icon-name="invoices" class="icon icon-light"></icon>
-</button>
+</a>
 
 <!-- Modal -->
 <div class="modal fade" id="addInvoiceToOrderModal-{{ $order->id }}" tabindex="-1" aria-labelledby="addInvoiceToOrderModalLabel-{{ $order->id }}" aria-hidden="true">

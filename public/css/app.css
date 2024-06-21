@@ -12344,10 +12344,11 @@ aside.collapsed {
   }
   aside .SidebarLogo {
     margin-left: 14px;
-    height: 22px;
-    width: 109px;
+    height: 40px;
+    width: 150px;
     background-image: url("/images/svglogo2.svg");
     background-repeat: no-repeat;
+    background-size: cover;
   }
   /*Show navbar desktop*/
   aside.collapsed {

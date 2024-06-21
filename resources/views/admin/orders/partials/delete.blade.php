@@ -14,7 +14,7 @@
 
 
 <form-crud-handler action="{{ route('admin.order.deleteOrder', $order->id) }}" confirm="Are you sure you want to delete this order?" confirmButtonText="Yes" cancelButtonText="Cancel" message="Delete order">
-    <button type="submit" class="btn btn-link">
-        <icon icon-name="delete" class="icon icon-light"></icon>
+    <button type="submit" class="btn btn-link p-0">
+        <icon icon-name="trash" class="icon icon-light"></icon>
     </button>
 </form-crud-handler>

@@ -34,7 +34,8 @@ class OrderController extends Controller
         } else {
             $order->update([
                 'price' => $request->input('price'),
-                'status' => $request->input('status'),
+                'status' => $request->input('status'),   
+                'payment_parts' => $request->input('payment_parts'),
                 'work_hours' => $request->input('work_hours'),
             ]);
         }
