@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<a type="button" data-bs-toggle="modal" data-bs-target="#editorderModal-{{ $order->id }}">
+<a type="button" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#editorderModal-{{ $order->id }}">
   <icon icon-name="edit" class="icon icon-light"></icon>
 </a>
 
@@ -18,6 +18,7 @@
           @csrf
           <div class="mb-3 d-flex flex-row gap-2">
             <input type="number"class="form-control" name="price" value="{{ $order->price}}" min="0">
+            <input type="number"class="form-control" name="payment_parts" value="{{ $order->payment_parts}}" min="0">
             <input type="number"class="form-control" name="status" value="{{ $order->status}}" min="0" max="10">
             <input type="time" class="form-control" name="work_hours" id="workhours" value="{{ $order->work_hours }}" pattern="[0-9]{2}:[0-9]{2}">
           </div>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id')->nullable()->after('user_id');
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->integer('payment_parts')->default(1)->after('order_id');
-            $table->dropColumn('service_ids');
+        //    $table->dropColumn('service_ids');
         });
 
         Schema::table('orders', function (Blueprint $table) {
@@ -32,8 +32,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('invoices', function (Blueprint $table) {
-            $table->json('service_ids')->nullable();
-        });
+        // Schema::table('invoices', function (Blueprint $table) {
+        //     $table->json('service_ids')->nullable();
+        // });
     }
 };

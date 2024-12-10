@@ -15,10 +15,11 @@ $Logo-URL-small: "/images/svglogo.svg";
   {
     //margin-top: 27px;
     margin-left: 14px;
-    height: 22px;
-    width:109px;
+    height: 40px;
+    width:150px;
     background-image: url($logo-url);
     background-repeat: no-repeat;
+    background-size: cover;
   }
   @if($logo-url == $Logo-URL-small)
   {

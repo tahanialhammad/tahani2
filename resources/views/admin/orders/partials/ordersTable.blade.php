@@ -11,7 +11,7 @@
                         <th scope="col">{{ trans("services.order-number")}}</th>
                         <th scope="col">{{ trans("general.customer")}}</th>
                         <th scope="col">{{ trans("general.price")}}</th>
-                        <th scope="col">payment_parts</th>                  
+                        <th scope="col">Payment parts</th>                  
                         <th scope="col">{{ trans("services.service")}}</th>
                         <th scope="col">{{ trans("general.status")}}</th>
                         <th scope="col">work_hours</th>
@@ -35,8 +35,9 @@
                             </a>
                             @include('admin.orders.partials.edit')
                             @include('admin.orders.partials.delete')
+                            @include('admin.orders.partials.addInvoiceToOrder')
                             @include('admin.orders.partials.download')
-                            <!-- @include('admin.orders.partials.addInvoiceToOrder') -->
+
                         </td>
                     </tr>
                     @empty
