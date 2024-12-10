@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('services', function (Blueprint $table) {
-            $table->decimal('price', 4, 2)->default(0.00)->change();
-        });
+        // Schema::table('services', function (Blueprint $table) {
+        //     $table->decimal('price', 4, 2)->default(0.00)->change();
+        // });
     }
 };
